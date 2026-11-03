@@ -1,0 +1,10 @@
+# Add this to ~/.codex/config.toml to give Codex the Local SEO tools, then copy the skills:
+#   cp -r plugin/skills/* ~/.codex/skills/
+# The bridge runs locally. It talks to the Chrome extension on 127.0.0.1 and needs no API key;
+# paid data (DataForSEO) uses the keys you saved in the extension. Pair them once: run
+# `npx -y @workpods/local-seo pair` and enter the code in the extension's Agent connection.
+[mcp_servers.local-seo]
+command = "npx"
+args = ["-y", "@workpods/local-seo", "mcp"]
+# A geo-grid opens Maps once per point, so a large one can take several minutes.
+tool_timeout_sec = 1800

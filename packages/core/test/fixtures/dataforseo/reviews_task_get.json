@@ -1,0 +1,237 @@
+{
+  "_source": "docs example https://docs.dataforseo.com/v3/business_data/google/reviews/task_get/",
+  "_trimmed": "items trimmed from 10 to 3 (docs items 1, 2, 7); items_count left at the documented 10",
+  "version": "0.1.20240514",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.0790 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06051709-1535-0298-0000-7e1fd2d51236",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.0242 sec.",
+      "cost": 0,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "business_data",
+        "google",
+        "reviews",
+        "task_get",
+        "06051709-1535-0298-0000-7e1fd2d51236"
+      ],
+      "data": {
+        "se_type": "reviews",
+        "se": "google",
+        "api": "business_data",
+        "function": "reviews",
+        "location_name": "London,England,United Kingdom",
+        "language_name": "English",
+        "keyword": "hedonism wines",
+        "depth": 10,
+        "sort_by": "highest_rating",
+        "device": "desktop",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "hedonism wines",
+          "type": "google_reviews",
+          "se_domain": "google.co.uk",
+          "location_code": 1006886,
+          "language_code": "en",
+          "check_url": "https://www.google.co.uk/search?q=hedonism%20wines&num=100&sort=ratingHigh&hl=en&gl=GB&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCXXeIa8LoNhHEZkq1d1aOpZS",
+          "datetime": "2024-06-05 14:09:33 +00:00",
+          "title": "Hedonism Wines",
+          "sub_title": "3-7 Davies St, London",
+          "rating": {
+            "rating_type": "Max5",
+            "value": 4.8,
+            "votes_count": 1226,
+            "rating_max": 5
+          },
+          "feature_id": "0x4876052ce9c2190f:0x4e1505095325804d",
+          "place_id": "ChIJDxnC6SwFdkgRTYAlUwkFFU4",
+          "cid": "5626408847077113933",
+          "reviews_count": 1226,
+          "items_count": 10,
+          "items": [
+            {
+              "type": "google_reviews_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "position": "right",
+              "xpath": "/div[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[1]",
+              "review_text": "You will love the attention to detail and so many selections. Rare options and affordable take away bottles for the night. Located in beautiful Mayfair, the selection here is remarkable. Enomatic wine machines to taste so rare wines as well. Hide is their Michelin Star restaurant just down the road which is also a must visit.",
+              "original_review_text": null,
+              "original_language": "en",
+              "time_ago": "a month ago",
+              "timestamp": "2024-05-05 14:09:32 +00:00",
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": null,
+                "rating_max": 5
+              },
+              "reviews_count": 116,
+              "photos_count": 369,
+              "local_guide": true,
+              "profile_name": "Cam Pinkney",
+              "profile_url": "https://www.google.com/maps/contrib/104039353279027434275?hl=en-US&ved=1t:31294&ictx=111",
+              "review_url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnSURqdk5hTHB3RRAB!2m1!1s0x0:0x4e1505095325804d!3m1!1s2@1:CIHM0ogKEICAgIDjvNaLpwE%7CCgwIi8jEsQYQoOn5hAE%7C?hl=en-US",
+              "profile_image_url": "https://lh3.googleusercontent.com/a-/ALV-UjUy74ouVG2MVKWQwnYOAk36nXWri5-jelEVkmaMtSsBbxkfj9AyMA=s40-c-rp-mo-ba5-br100",
+              "owner_answer": null,
+              "original_owner_answer": null,
+              "owner_time_ago": null,
+              "owner_timestamp": null,
+              "review_id": "ChdDSUhNMG9nS0VJQ0FnSURqdk5hTHB3RRAB",
+              "images": [
+                {
+                  "type": "images_element",
+                  "alt": null,
+                  "url": "https://www.google.co.uk/maps/uv?pb=!1s0x4876052ce9c2190f:0x4e1505095325804d!3m1!7e115!5sGoogle+Search!15zQ2dJZ0FRPT0&hl=en&imagekey=!1e10!2sAF1QipOMC5s-67RgQXoshiBCSiCnLIBCYBVfTR_mrsV-&sa=X&ved=2ahUKEwj0y47s0cSGAxWgE7kGHdyNDUsQ9fkHKAB6BAgBEF4",
+                  "image_url": "https://lh5.googleusercontent.com/p/AF1QipOMC5s-67RgQXoshiBCSiCnLIBCYBVfTR_mrsV-"
+                },
+                {
+                  "type": "images_element",
+                  "alt": null,
+                  "url": "https://www.google.co.uk/maps/uv?pb=!1s0x4876052ce9c2190f:0x4e1505095325804d!3m1!7e115!5sGoogle+Search!15zQ2dJZ0FRPT0&hl=en&imagekey=!1e10!2sAF1QipMhTF1B-5d9_h3za1YF-uqyiR8_ddNsQeIZqxoF&sa=X&ved=2ahUKEwj0y47s0cSGAxWgE7kGHdyNDUsQ9fkHKAF6BAgBEF8",
+                  "image_url": "https://lh5.googleusercontent.com/p/AF1QipMhTF1B-5d9_h3za1YF-uqyiR8_ddNsQeIZqxoF"
+                }
+              ],
+              "review_highlights": null
+            },
+            {
+              "type": "google_reviews_search",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "position": "right",
+              "xpath": "/div[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[2]",
+              "review_text": "Hedonism Wine is not just a store; it’s a treasure trove for wine lovers, a veritable museum of vintages from every corner of the globe. With a staggering collection of over 7,300 wines, their selection is unparalleled, and the staff’s knowledge and friendliness add to the exceptional experience. A unique feature is their innovative use of Enomatic machines, allowing you to sample nearly 50 wines on-site, a luxury not found elsewhere. This place truly redefines the wine shopping experience.nThe highlight of my visit was interacting with Gennaro, a sales associate whose passion for wine and exceptional customer service skills made my experience memorable. His assistance in navigating the extensive selection of wines, spirits, and champagnes was invaluable. The ability to taste rare and prohibitively expensive bottles by the glass is a testament to Hedonism’s commitment to making luxury accessible.nHedonism’s appeal extends beyond the extensive range of bottles. The store, located in the heart of London’s Mayfair, is a blend of sophistication and accessibility, catering to both connoisseurs and casual enthusiasts. Whether you’re on a budget or ready to splurge, there’s something for every wallet. Hedonism Wine is more than a store; it’s an experience that caters to all your senses, leaving you wanting to return for more.",
+              "original_review_text": null,
+              "original_language": "en",
+              "time_ago": "5 months ago",
+              "timestamp": "2024-01-05 14:09:32 +00:00",
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": 4,
+                "rating_max": 5
+              },
+              "reviews_count": 95,
+              "photos_count": 567,
+              "local_guide": true,
+              "profile_name": "Daniel Neuhaus",
+              "profile_url": "https://www.google.com/maps/contrib/106423677302961815900?hl=en-US&ved=1t:31294&ictx=111",
+              "review_url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUMxbHFyMFlnEAE!2m1!1s0x0:0x4e1505095325804d!3m1!1s2@1:CIHM0ogKEICAgIC1lqr0Yg%7CCgwI1Mu5rAYQiMad3AI%7C?hl=en-US",
+              "profile_image_url": "https://lh3.googleusercontent.com/a-/ALV-UjXZjOnu-mSBCYgdTUVQhKggRWKClFaNp_4zTZK3iFFvuEdCWhizJg=s40-c-rp-mo-ba5-br100",
+              "owner_answer": "Daniel, huge thanks for the positive review and Gennaro has been made aware of your very kind feedback. We hope to see you soon in the shop.",
+              "original_owner_answer": null,
+              "owner_time_ago": "4 months ago",
+              "owner_timestamp": "2024-02-05 14:09:32 +00:00",
+              "review_id": "ChZDSUhNMG9nS0VJQ0FnSUMxbHFyMFlnEAE",
+              "images": [
+                {
+                  "type": "images_element",
+                  "alt": null,
+                  "url": "https://www.google.co.uk/maps/uv?pb=!1s0x4876052ce9c2190f:0x4e1505095325804d!3m1!7e115!5sGoogle+Search!15zQ2dJZ0FRPT0&hl=en&imagekey=!1e10!2sAF1QipOxnbyXsOabrlIBl3znPswmllJ0RVJQmwK1K7MQ&sa=X&ved=2ahUKEwj0y47s0cSGAxWgE7kGHdyNDUsQ9fkHKAB6BQgBEIEB",
+                  "image_url": "https://lh5.googleusercontent.com/p/AF1QipOxnbyXsOabrlIBl3znPswmllJ0RVJQmwK1K7MQ"
+                },
+                {
+                  "type": "images_element",
+                  "alt": null,
+                  "url": "https://www.google.co.uk/maps/uv?pb=!1s0x4876052ce9c2190f:0x4e1505095325804d!3m1!7e115!5sGoogle+Search!15zQ2dJZ0FRPT0&hl=en&imagekey=!1e10!2sAF1QipMcmzD1ndkRm4yXuO1qlP4LwSeDrNmJwM8jljqD&sa=X&ved=2ahUKEwj0y47s0cSGAxWgE7kGHdyNDUsQ9fkHKAF6BQgBEIIB",
+                  "image_url": "https://lh5.googleusercontent.com/p/AF1QipMcmzD1ndkRm4yXuO1qlP4LwSeDrNmJwM8jljqD"
+                },
+                {
+                  "type": "images_element",
+                  "alt": null,
+                  "url": "https://www.google.co.uk/maps/uv?pb=!1s0x4876052ce9c2190f:0x4e1505095325804d!3m1!7e115!5sGoogle+Search!15zQ2dJZ0FRPT0&hl=en&imagekey=!1e10!2sAF1QipMS48rJyRld7CE7HNv9Wxy5tD_QVklRwPPehYF_&sa=X&ved=2ahUKEwj0y47s0cSGAxWgE7kGHdyNDUsQ9fkHKAJ6BQgBEIMB",
+                  "image_url": "https://lh5.googleusercontent.com/p/AF1QipMS48rJyRld7CE7HNv9Wxy5tD_QVklRwPPehYF_"
+                },
+                {
+                  "type": "images_element",
+                  "alt": null,
+                  "url": "https://www.google.co.uk/maps/uv?pb=!1s0x4876052ce9c2190f:0x4e1505095325804d!3m1!7e115!5sGoogle+Search!15zQ2dJZ0FRPT0&hl=en&imagekey=!1e10!2sAF1QipNKwAi8F55QTypST8vxJjwPdVdJ1C7jqodjIlM_&sa=X&ved=2ahUKEwj0y47s0cSGAxWgE7kGHdyNDUsQ9fkHKAN6BQgBEIQB",
+                  "image_url": "https://lh5.googleusercontent.com/p/AF1QipNKwAi8F55QTypST8vxJjwPdVdJ1C7jqodjIlM_"
+                },
+                {
+                  "type": "images_element",
+                  "alt": null,
+                  "url": "https://www.google.co.uk/maps/uv?pb=!1s0x4876052ce9c2190f:0x4e1505095325804d!3m1!7e115!5sGoogle+Search!15zQ2dJZ0FRPT0&hl=en&imagekey=!1e10!2sAF1QipOCK2euoeb4CLLCeEcOarekLtecp6JMi2NszWgc&sa=X&ved=2ahUKEwj0y47s0cSGAxWgE7kGHdyNDUsQ9fkHKAR6BQgBEIUB",
+                  "image_url": "https://lh5.googleusercontent.com/p/AF1QipOCK2euoeb4CLLCeEcOarekLtecp6JMi2NszWgc"
+                },
+                {
+                  "type": "images_element",
+                  "alt": null,
+                  "url": "https://www.google.co.uk/maps/uv?pb=!1s0x4876052ce9c2190f:0x4e1505095325804d!3m1!7e115!5sGoogle+Search!15zQ2dJZ0FRPT0&hl=en&imagekey=!1e10!2sAF1QipM2Cr6MIQgbyiJS-gpqK2NU0P789meVYsdQYBK2&sa=X&ved=2ahUKEwj0y47s0cSGAxWgE7kGHdyNDUsQ9fkHKAV6BQgBEIYB",
+                  "image_url": "https://lh5.googleusercontent.com/p/AF1QipM2Cr6MIQgbyiJS-gpqK2NU0P789meVYsdQYBK2"
+                },
+                {
+                  "type": "images_element",
+                  "alt": null,
+                  "url": "https://www.google.co.uk/maps/uv?pb=!1s0x4876052ce9c2190f:0x4e1505095325804d!3m1!7e115!5sGoogle+Search!15zQ2dJZ0FRPT0&hl=en&imagekey=!1e10!2sAF1QipNE1FMn9m2eFg8tApMlOGiYhPtPvO3OtvOO4X9A&sa=X&ved=2ahUKEwj0y47s0cSGAxWgE7kGHdyNDUsQ9fkHKAZ6BQgBEIcB",
+                  "image_url": "https://lh5.googleusercontent.com/p/AF1QipNE1FMn9m2eFg8tApMlOGiYhPtPvO3OtvOO4X9A"
+                },
+                {
+                  "type": "images_element",
+                  "alt": null,
+                  "url": "https://www.google.co.uk/maps/uv?pb=!1s0x4876052ce9c2190f:0x4e1505095325804d!3m1!7e115!5sGoogle+Search!15zQ2dJZ0FRPT0&hl=en&imagekey=!1e10!2sAF1QipPAyksidxFxyJlmm4BKaT6Fw7q9dM2RSgYUfSLS&sa=X&ved=2ahUKEwj0y47s0cSGAxWgE7kGHdyNDUsQ9fkHKAd6BQgBEIgB",
+                  "image_url": "https://lh5.googleusercontent.com/p/AF1QipPAyksidxFxyJlmm4BKaT6Fw7q9dM2RSgYUfSLS"
+                },
+                {
+                  "type": "images_element",
+                  "alt": null,
+                  "url": "https://www.google.co.uk/maps/uv?pb=!1s0x4876052ce9c2190f:0x4e1505095325804d!3m1!7e115!5sGoogle+Search!15zQ2dJZ0FRPT0&hl=en&imagekey=!1e10!2sAF1QipO6uCNRtJTpUJQXLUFeUSZw7ScRALZnpvEHhQSK&sa=X&ved=2ahUKEwj0y47s0cSGAxWgE7kGHdyNDUsQ9fkHKAh6BQgBEIkB",
+                  "image_url": "https://lh5.googleusercontent.com/p/AF1QipO6uCNRtJTpUJQXLUFeUSZw7ScRALZnpvEHhQSK"
+                },
+                {
+                  "type": "images_element",
+                  "alt": null,
+                  "url": "https://www.google.co.uk/maps/uv?pb=!1s0x4876052ce9c2190f:0x4e1505095325804d!3m1!7e115!5sGoogle+Search!15zQ2dJZ0FRPT0&hl=en&imagekey=!1e10!2sAF1QipN-1GktR1mKeBvFarNOZXDAH8EPuotRI7w5dUjo&sa=X&ved=2ahUKEwj0y47s0cSGAxWgE7kGHdyNDUsQ9fkHKAl6BQgBEIoB",
+                  "image_url": "https://lh5.googleusercontent.com/p/AF1QipN-1GktR1mKeBvFarNOZXDAH8EPuotRI7w5dUjo"
+                }
+              ],
+              "review_highlights": null
+            },
+            {
+              "type": "google_reviews_search",
+              "rank_group": 7,
+              "rank_absolute": 7,
+              "position": "right",
+              "xpath": "/div[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[7]",
+              "review_text": "A lot of great whisky's and other liquor. Very friendly and helpful staff. They have a lot of knowledge about the liquor they sell and how to help someone get something they like. Would definitly recommend",
+              "original_review_text": null,
+              "time_ago": "3 weeks ago",
+              "timestamp": "2024-05-15 14:09:32 +00:00",
+              "rating": {
+                "rating_type": "Max5",
+                "value": 5,
+                "votes_count": null,
+                "rating_max": 5
+              },
+              "reviews_count": 43,
+              "photos_count": 8,
+              "local_guide": true,
+              "profile_name": "Jesse Veldmaat",
+              "profile_url": "https://www.google.com/maps/contrib/107909337398257714959?hl=en-US&ved=1t:31294&ictx=111",
+              "review_url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSURqdjdITWNBEAE!2m1!1s0x0:0x4e1505095325804d!3m1!1s2@1:CIHM0ogKEICAgIDjv7HMcA%7CCgwI4NzysQYQqPeSsQM%7C?hl=en-US",
+              "profile_image_url": "https://lh3.googleusercontent.com/a-/ALV-UjWynGxU_sPMzzThoIvgWMsopVO0YgK6zse-_qKXrETjkKOk-l5x=s40-c-rp-mo-ba3-br100",
+              "owner_answer": null,
+              "original_owner_answer": null,
+              "owner_time_ago": null,
+              "owner_timestamp": null,
+              "review_id": "ChZDSUhNMG9nS0VJQ0FnSURqdjdITWNBEAE",
+              "images": null,
+              "review_highlights": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

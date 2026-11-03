@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "local-seo": {
+      "command": "npx",
+      "args": ["-y", "@workpods/local-seo", "mcp"]
+    }
+  }
+}

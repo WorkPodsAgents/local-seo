@@ -1,0 +1,110 @@
+/* The aubergine slab every WorkPods surface opens with. */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: var(--slab);
+  color: var(--on-dark-1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.name {
+  font-weight: var(--fw-strong);
+}
+
+.site {
+  overflow: hidden;
+  color: var(--on-dark-2);
+  font-size: var(--fs-caption);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  font: inherit;
+  cursor: pointer;
+  align-items: center;
+  gap: 6px;
+  padding: 2px var(--space-2);
+  border: 1px solid var(--on-dark-line);
+  border-radius: var(--radius-pill);
+  background: var(--on-dark-fill);
+  color: var(--on-dark-1);
+  font-size: var(--fs-caption);
+  white-space: nowrap;
+}
+
+.chip:hover,
+.settings:hover,
+.settings[aria-pressed='true'] {
+  border-color: var(--on-dark-2);
+  background: var(--slab-raised);
+}
+
+.chip:focus-visible,
+.settings:focus-visible {
+  outline: 2px solid var(--on-dark-1);
+  outline-offset: 1px;
+}
+
+.add {
+  color: var(--on-dark-2);
+}
+
+.settings {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-inline-start: auto;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--on-dark-line);
+  border-radius: var(--radius-s);
+  background: transparent;
+  color: var(--on-dark-1);
+  font: inherit;
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+}
+
+.light {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.ready {
+  background: var(--status-good-on-dark);
+}
+
+.attention {
+  background: var(--status-warning-on-dark);
+}
+
+.off {
+  box-shadow: inset 0 0 0 1.5px var(--on-dark-2);
+}

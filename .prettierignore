@@ -1,0 +1,6 @@
+vendor/
+LICENSE
+NOTICE
+package-lock.json
+.output/
+.wxt/

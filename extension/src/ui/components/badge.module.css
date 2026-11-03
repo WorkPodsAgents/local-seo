@@ -1,0 +1,58 @@
+/* Tones map onto the one status ramp, as the dashboard's badges and checklist do. */
+.good {
+  --tone-fg: var(--status-good-fg);
+  --tone-bg: var(--status-good-bg);
+}
+.warn {
+  --tone-fg: var(--status-warning-fg);
+  --tone-bg: var(--status-warning-bg);
+}
+.high {
+  --tone-fg: var(--severity-high-fg);
+  --tone-bg: var(--severity-high-bg);
+}
+.bad {
+  --tone-fg: var(--status-bad-fg);
+  --tone-bg: var(--status-bad-bg);
+}
+.info {
+  --tone-fg: var(--status-info-fg);
+  --tone-bg: var(--status-info-bg);
+}
+.neutral {
+  --tone-fg: var(--status-neutral-fg);
+  --tone-bg: var(--status-neutral-bg);
+}
+.accent {
+  --tone-fg: var(--accent);
+  --tone-bg: var(--accent-soft);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--tone-bg);
+  color: var(--tone-fg);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.dot {
+  display: inline-block;
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tone-fg);
+}
+
+.mark {
+  flex: none;
+  margin-block-start: 1px;
+  color: var(--tone-fg);
+}

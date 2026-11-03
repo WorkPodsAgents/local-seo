@@ -1,0 +1,12 @@
+{
+  "name": "local-seo",
+  "owner": { "name": "WorkPods", "url": "https://workpods.ai" },
+  "plugins": [
+    {
+      "name": "local-seo",
+      "version": "1.0.0",
+      "source": "./plugin",
+      "description": "Audit Google Business Profiles and local rankings in Google Maps, then draft the fixes."
+    }
+  ]
+}

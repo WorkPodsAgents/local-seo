@@ -1,0 +1,12 @@
+/* Plus Jakarta Sans's metric-matched fallback, shared by the dashboard (app-fonts.css) and the
+   public site (public/fonts/site-fonts.css). Until the face arrives, text is set in a local Arial
+   scaled to its metrics (measured against Liberation Sans on the site's own words), so the swap
+   moves no line and shifts nothing. */
+@font-face {
+  font-family: 'Plus Jakarta Sans Fallback';
+  src: local('Arial'), local('Liberation Sans'), local('Helvetica');
+  size-adjust: 106.4%;
+  ascent-override: 97.5%;
+  descent-override: 20.9%;
+  line-gap-override: 0%;
+}

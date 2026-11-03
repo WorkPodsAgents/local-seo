@@ -1,0 +1,68 @@
+<!doctype html>
+<!-- The 440x280 small promo tile; render.mjs photographs it. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../extension/theme/theme.css" />
+    <style>
+      html,
+      body {
+        width: 440px;
+        height: 280px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--slab);
+      }
+      .tile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+        height: 280px;
+        padding: 0 36px;
+        background: radial-gradient(circle at 100% 0%, var(--slab-glow), transparent 60%);
+        color: var(--on-dark-1);
+      }
+      .name {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      img {
+        width: 72px;
+        height: 72px;
+      }
+      h1 {
+        margin: 0;
+        color: var(--on-dark-1);
+        font-size: 34px;
+        font-weight: var(--fw-strong);
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+      }
+      .by {
+        color: var(--on-dark-2);
+        font-size: 16px;
+        font-weight: var(--fw-medium);
+      }
+      p {
+        margin: 0;
+        color: var(--on-dark-2);
+        font-size: 17px;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tile">
+      <div class="name">
+        <img src="../../extension/assets/icon.svg" alt="" />
+        <div>
+          <h1>Local SEO</h1>
+          <div class="by">by WorkPods</div>
+        </div>
+      </div>
+      <p>Audit Business Profiles and Maps rankings, free in your own browser.</p>
+    </div>
+  </body>
+</html>

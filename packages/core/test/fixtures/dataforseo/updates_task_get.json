@@ -1,0 +1,114 @@
+{
+  "_source": "docs example https://docs.dataforseo.com/v3/business_data/google/my_business_updates/task_get/",
+  "_trimmed": "items trimmed from 10 to 3 (docs items 1, 3, 4); items_count left at the documented 10",
+  "version": "0.1.20200909",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.1259 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "09202135-1535-0243-0000-a6230b72c28e",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.0424 sec.",
+      "cost": 0,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "business_data",
+        "google",
+        "my_business_updates",
+        "task_get",
+        "09202135-1535-0243-0000-a6230b72c28e"
+      ],
+      "data": {
+        "se_type": "business_updates",
+        "se": "google",
+        "api": "business_data",
+        "function": "my_business_updates",
+        "language_code": "en",
+        "location_name": "New York,New York,United States",
+        "keyword": "RustyBrick, Inc.",
+        "device": "desktop",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "RustyBrick, Inc.",
+          "se_domain": "google.com",
+          "location_code": 1023191,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=RustyBrick%2C%20Inc.&num=10&hl=en&gl=US&gws_rd=cr&uule=w+CAIQIFISCTsIP9OlT8KJEWL-d-EGjwvI",
+          "datetime": "2020-09-20 18:35:29 +00:00",
+          "business_updates_id": "lph_7KBnX7-VBoK6ad3rvYAN56",
+          "cid": "2946633002421908862",
+          "feature_id": "0x89c2e830ac1a4c3f:0x28e48b1a90ccf57e",
+          "item_types": ["google_business_post"],
+          "items_count": 10,
+          "items": [
+            {
+              "type": "google_business_post",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "position": "right",
+              "xpath": "/div[1]/span[1]",
+              "author": "RustyBrick, Inc.",
+              "snippet": null,
+              "post_text": "The RustyBrick team is working from home. We are fully up and operational. But we are not physically in the office. Please be safe and stay home.",
+              "url": "https://search.google.com/local/posts?q=RustyBrick,+Inc.&ludocid=2946633002421908862&lpsid=1410215436954082713&source=sh/x/localposts&lsig=AB86z5VWpF0lsMxd28ZU-_oXjiYQ",
+              "images_url": "https://lh4.googleusercontent.com/-qgmI_Ron5SQ/AAAAAAAAAAI/AAAAAAAAAAA/cbSEs9rPOZE/s40-c-k-mo/photo.jpg",
+              "post_date": "04/02/2020 00:00:00",
+              "timestamp": "2020-04-02 00:00:00 +00:00",
+              "links": null
+            },
+            {
+              "type": "google_business_post",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "position": "right",
+              "xpath": "/div[3]/span[1]",
+              "author": "RustyBrick, Inc.",
+              "snippet": null,
+              "post_text": "The RustyBrick Sukkah is now available for use",
+              "url": "https://search.google.com/local/posts?q=RustyBrick,+Inc.&ludocid=2946633002421908862&lpsid=536816744311833583&source=sh/x/localposts&lsig=AB86z5VWpF0lsMxd28ZU-_oXjiYQ",
+              "images_url": "https://lh4.googleusercontent.com/-qgmI_Ron5SQ/AAAAAAAAAAI/AAAAAAAAAAA/cbSEs9rPOZE/s40-c-k-mo/photo.jpg",
+              "post_date": "09/27/2018 00:00:00",
+              "timestamp": "2018-09-27 00:00:00 +00:00",
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "Learn more",
+                  "url": "https://www.rustybrick.com/rustysukkah-is-available.html"
+                }
+              ]
+            },
+            {
+              "type": "google_business_post",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "position": "right",
+              "xpath": "/div[4]/span[1]",
+              "author": "RustyBrick, Inc.",
+              "snippet": null,
+              "post_text": "Double Header For RustyBrick's Annual Rockland Boulders Baseball Game. The stadium was pretty empty, as usual but makes it good to have it to ourselves. :)",
+              "url": "https://search.google.com/local/posts?q=RustyBrick,+Inc.&ludocid=2946633002421908862&lpsid=4949232654074362515&source=sh/x/localposts&lsig=AB86z5VWpF0lsMxd28ZU-_oXjiYQ",
+              "images_url": "https://lh4.googleusercontent.com/-qgmI_Ron5SQ/AAAAAAAAAAI/AAAAAAAAAAA/cbSEs9rPOZE/s40-c-k-mo/photo.jpg",
+              "post_date": "08/15/2018 00:00:00",
+              "timestamp": "2018-08-15 00:00:00 +00:00",
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "Learn more",
+                  "url": "https://www.rustybrick.com/double-header.html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

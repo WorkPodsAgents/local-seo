@@ -1,0 +1,17 @@
+{
+  "name": "@local-seo/core",
+  "author": "Shefali Munjal",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./src/*/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.15"
+  }
+}

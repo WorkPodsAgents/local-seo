@@ -1,0 +1,179 @@
+/* The checklist: one bordered list of group sections, each with the same head (name on the
+   left, one count on the right), and rows that show the check's name until opened. */
+.groups {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+}
+
+.group + .group {
+  border-block-start: 1px solid var(--line);
+}
+
+.group summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.group summary::-webkit-details-marker {
+  display: none;
+}
+
+.groupHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+}
+
+.groupHead:hover {
+  background: var(--surface-hover);
+}
+
+.group[open] > .groupHead {
+  background: var(--surface-sunken);
+  border-block-end: 1px solid var(--line-faint);
+}
+
+.groupTitle {
+  flex: 1;
+  min-width: 0;
+  color: var(--ink-1);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-strong);
+}
+
+.tally {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  white-space: nowrap;
+}
+
+.passed {
+  color: var(--status-good-fg);
+}
+
+.muted {
+  color: var(--ink-3);
+}
+
+.chevron {
+  flex: none;
+  color: var(--ink-3);
+  transition: transform var(--motion-fast) var(--motion-ease);
+}
+
+details[open] > summary > .chevron {
+  transform: rotate(90deg);
+}
+
+.rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rows > li + li {
+  border-block-start: 1px solid var(--line-faint);
+}
+
+.rowHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3) var(--space-2) var(--space-6);
+}
+
+.rowHead:hover {
+  background: var(--surface-hover);
+}
+
+.title {
+  flex: 1;
+  min-width: 0;
+  color: var(--ink-1);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+}
+
+.quiet {
+  color: var(--ink-2);
+  font-weight: var(--fw-regular);
+}
+
+/* Lines up under the title: the row's left padding plus the 16px mark and its gap. */
+.rowBody {
+  padding: 0 var(--space-3) var(--space-3) calc(var(--space-6) + 16px + var(--space-2));
+}
+
+.summary {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: var(--fs-caption);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-2);
+  margin-block-start: var(--space-2);
+}
+
+.fold {
+  border-block-start: 1px solid var(--line-faint);
+}
+
+.fold > summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3) var(--space-2) var(--space-6);
+  color: var(--ink-2);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+}
+
+.fold > summary:hover {
+  color: var(--ink-1);
+}
+
+.fold > .rows {
+  border-block-start: 1px solid var(--line-faint);
+}
+
+.rubric {
+  margin: var(--space-1) 0 0;
+  color: var(--ink-3);
+  font-size: var(--fs-caption);
+  line-height: 1.5;
+}
+
+.fix {
+  margin: var(--space-2) 0 0;
+  padding: var(--space-2) var(--space-3);
+  border-inline-start: 2px solid var(--accent);
+  border-radius: 0 var(--radius-s) var(--radius-s) 0;
+  background: var(--accent-soft);
+  color: var(--ink-1);
+  font-size: var(--fs-caption);
+  line-height: 1.5;
+}
+
+.evidence {
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  overflow-wrap: anywhere;
+}

@@ -1,0 +1,94 @@
+<!doctype html>
+<!-- One 1280x800 store screenshot: a headline and a line on the left, a side panel photographed
+     in demo mode on the right. render.mjs fills it from the query string:
+     ?headline=…&line=…&shot=<file URL of the panel image> -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../extension/theme/theme.css" />
+    <style>
+      html,
+      body {
+        width: 1280px;
+        height: 800px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--slab);
+      }
+      .canvas {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 440px;
+        gap: 64px;
+        align-items: center;
+        height: 800px;
+        padding: 0 96px 0 104px;
+        background: radial-gradient(circle at 92% 18%, var(--slab-glow), transparent 55%);
+        color: var(--on-dark-1);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 40px;
+        color: var(--on-dark-2);
+        font-size: 20px;
+        font-weight: var(--fw-medium);
+      }
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+      .brand strong {
+        color: var(--on-dark-1);
+      }
+      h1 {
+        margin: 0 0 24px;
+        color: var(--on-dark-1);
+        font-size: 54px;
+        font-weight: var(--fw-strong);
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+      }
+      p {
+        max-width: 560px;
+        margin: 0;
+        color: var(--on-dark-2);
+        font-size: 22px;
+        line-height: 1.5;
+      }
+      .panel {
+        width: 400px;
+        height: 720px;
+        overflow: hidden;
+        border: 1px solid var(--on-dark-line);
+        border-radius: 18px;
+        background: var(--surface);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+      }
+      .panel img {
+        display: block;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvas">
+      <div>
+        <div class="brand">
+          <img src="../../extension/assets/icon.svg" alt="" />
+          <span><strong>Local SEO</strong> by WorkPods</span>
+        </div>
+        <h1 id="headline"></h1>
+        <p id="line"></p>
+      </div>
+      <div class="panel"><img id="shot" alt="" /></div>
+    </div>
+    <script>
+      const params = new URLSearchParams(location.search)
+      document.getElementById('headline').textContent = params.get('headline')
+      document.getElementById('line').textContent = params.get('line')
+      document.getElementById('shot').src = params.get('shot')
+    </script>
+  </body>
+</html>

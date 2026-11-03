@@ -1,0 +1,18 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+
+.screen {
+  padding: var(--space-3);
+}
+
+.screen[hidden] {
+  display: none;
+}

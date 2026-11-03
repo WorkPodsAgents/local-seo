@@ -1,0 +1,1614 @@
+{
+    "checks": [
+        {
+            "id": "A1",
+            "title": "Crawl coverage: planned, crawled, sampled, skipped pages and stop reason",
+            "theme": "lifecycle",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The crawl did not run or returned no pages, so no page-level check can be made.",
+                "high": "The crawl stopped early or skipped money pages, leaving most of the site unmeasured.",
+                "medium": "The crawl covered money pages but sampled or skipped a large share of other pages.",
+                "low": "A few low-value pages were skipped by rule and the stop reason is recorded."
+            }
+        },
+        {
+            "id": "A2",
+            "title": "Search Console keyword data for the last 3 full months",
+            "theme": "lifecycle",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Search Console is connected but returns no keyword data for any of the last 3 months.",
+                "high": "One or more of the last 3 full months is missing, so trends cannot be compared.",
+                "medium": "All months are present but a market or property in scope has gaps.",
+                "low": "Data is complete but the most recent month is not yet final."
+            }
+        },
+        {
+            "id": "A5",
+            "title": "DataForSEO Labs datasets fetched for the audit scope",
+            "theme": "lifecycle",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "DataForSEO Labs is enabled but no dataset could be fetched, blocking competitor and keyword checks.",
+                "high": "Core DataForSEO Labs datasets (domain overview or ranked keywords) are missing for the brand.",
+                "medium": "Brand datasets are present but some competitor or market datasets are missing.",
+                "low": "Datasets are present but one optional dataset is stale or truncated."
+            }
+        },
+        {
+            "id": "A6",
+            "title": "GA4 outcome data (sessions, channels, key events)",
+            "theme": "lifecycle",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "GA4 is connected but returns no data for the audit period.",
+                "high": "GA4 has data but no key events are defined, so outcomes cannot be measured.",
+                "medium": "GA4 data has gaps in the audit period or is missing a market in scope.",
+                "low": "GA4 data is complete but some events are named inconsistently."
+            }
+        },
+        {
+            "id": "A7",
+            "title": "robots.txt and sitemaps fetched for the owned hosts",
+            "theme": "lifecycle",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "robots.txt and sitemaps are unreachable for the main host.",
+                "high": "The sitemap is declared but cannot be fetched or parsed.",
+                "medium": "One owned host or sitemap child could not be fetched.",
+                "low": "Files were fetched but one is stale or has minor parse warnings."
+            }
+        },
+        {
+            "id": "A8",
+            "title": "Priority-page capture, PageSpeed mobile and desktop, and URL Inspection",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Money pages fail URL Inspection (not indexed) or fail to render in capture.",
+                "high": "Selected money pages have poor mobile Core Web Vitals (LCP, INP or CLS in the poor band).",
+                "medium": "Selected pages need improvement on Core Web Vitals or lack a measurement on one device.",
+                "low": "Pages pass but show minor PageSpeed opportunities."
+            }
+        },
+        {
+            "id": "AX1",
+            "title": "Key tasks an AI agent cannot complete on the site",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "An agent is blocked on every key task by a bot wall, a sign-in or a broken step, so no customer's agent can find a price, book or get in touch.",
+                "high": "An agent is blocked or stops partway on a money task (pricing, booking, a quote), for example at a control with no name or a step it cannot see.",
+                "medium": "Money tasks complete, but a supporting task is blocked or needs detours a person would not take.",
+                "low": "Only an informational task stops partway, and another path on the site reaches the same answer. A task our own safety rules stopped (a submit mid-flow, autosave, the step cap) never fires this check."
+            }
+        },
+        {
+            "id": "AX2",
+            "title": "Key forms not exposed as WebMCP tools, or runtime tools that mislead agents",
+            "theme": "technical",
+            "default_severity": "low",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Never critical: WebMCP is an early browser preview, and agents can still use the page's own controls.",
+                "high": "A runtime tool that buys, books or sends lacks consequentialHint, or one that only reads lacks readOnlyHint, so an agent could act without the confirmation a person expects.",
+                "medium": "The money-page forms the key tasks rely on (a quote, a booking, a search) are exposed as no tool, or runtime tools have vague descriptions or undescribed inputs.",
+                "low": "Only secondary forms are not exposed, or a tool returning third-party text lacks untrustedContentHint."
+            }
+        },
+        {
+            "id": "AX3",
+            "title": "The brand is not callable by AI assistants where its competitors are",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The brand's listed MCP server or app does not answer, or its listing names a server that is not there, so assistants that offer it fail its customers.",
+                "high": "Competitors are listed as apps or connectors in ChatGPT, Claude or Google and the brand has none, or the brand's Google app or target server leaves a tool without readOnlyHint or destructiveHint, which Google requires.",
+                "medium": "The brand's server has untyped or undocumented arguments, its Google app or target lacks server instructions, or it is listed on fewer of the platforms it chose than its competitors.",
+                "low": "No competitor is callable either, so the brand has a scoped opportunity to be first, or only optional annotations are missing."
+            }
+        },
+        {
+            "id": "B1",
+            "title": "Product information brand document (product_info)",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The requested product_info document is missing and downstream work depends on it.",
+                "high": "The product_info document exists but contradicts the brand's reviewed context or audit evidence.",
+                "medium": "The product_info document is partial: required sections are missing or unsupported by evidence.",
+                "low": "The product_info document is complete but has minor gaps or stale details."
+            }
+        },
+        {
+            "id": "B2",
+            "title": "Positioning brand document (positioning)",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The requested positioning document is missing and downstream work depends on it.",
+                "high": "The positioning document exists but contradicts the brand's reviewed context or audit evidence.",
+                "medium": "The positioning document is partial: required sections are missing or unsupported by evidence.",
+                "low": "The positioning document is complete but has minor gaps or stale details."
+            }
+        },
+        {
+            "id": "B3",
+            "title": "Ideal customer profile brand document (icp)",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The requested icp document is missing and downstream work depends on it.",
+                "high": "The icp document exists but contradicts the brand's reviewed context or audit evidence.",
+                "medium": "The icp document is partial: required sections are missing or unsupported by evidence.",
+                "low": "The icp document is complete but has minor gaps or stale details."
+            }
+        },
+        {
+            "id": "B4",
+            "title": "Brand voice brand document (brand_voice)",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The requested brand_voice document is missing and downstream work depends on it.",
+                "high": "The brand_voice document exists but contradicts the brand's reviewed context or audit evidence.",
+                "medium": "The brand_voice document is partial: required sections are missing or unsupported by evidence.",
+                "low": "The brand_voice document is complete but has minor gaps or stale details."
+            }
+        },
+        {
+            "id": "B5",
+            "title": "Competitor analysis brand document (competitor_analysis)",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The requested competitor_analysis document is missing and downstream work depends on it.",
+                "high": "The competitor_analysis document exists but contradicts the brand's reviewed context or audit evidence.",
+                "medium": "The competitor_analysis document is partial: required sections are missing or unsupported by evidence.",
+                "low": "The competitor_analysis document is complete but has minor gaps or stale details."
+            }
+        },
+        {
+            "id": "B6",
+            "title": "Content strategy brand document (content_strategy)",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The requested content_strategy document is missing and downstream work depends on it.",
+                "high": "The content_strategy document exists but contradicts the brand's reviewed context or audit evidence.",
+                "medium": "The content_strategy document is partial: required sections are missing or unsupported by evidence.",
+                "low": "The content_strategy document is complete but has minor gaps or stale details."
+            }
+        },
+        {
+            "id": "B7",
+            "title": "Marketing strategy brand document (marketing_strategy)",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The requested marketing_strategy document is missing and downstream work depends on it.",
+                "high": "The marketing_strategy document exists but contradicts the brand's reviewed context or audit evidence.",
+                "medium": "The marketing_strategy document is partial: required sections are missing or unsupported by evidence.",
+                "low": "The marketing_strategy document is complete but has minor gaps or stale details."
+            }
+        },
+        {
+            "id": "C1",
+            "title": "Competitor set accepted for the audit",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No competitor set exists, so no competitor comparison can be made.",
+                "high": "The competitor set omits the brand's main search or market competitors.",
+                "medium": "The set includes irrelevant domains or misses a market in scope.",
+                "low": "The set is sound but aliases or secondary competitors are incomplete."
+            }
+        },
+        {
+            "id": "C2",
+            "title": "Competitor domain overview (traffic, keywords, authority)",
+            "theme": "seo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The brand's organic visibility is a small fraction of every main competitor in its core market.",
+                "high": "The brand trails most main competitors on organic traffic and ranking keywords.",
+                "medium": "The brand trails some competitors or is losing ground period over period.",
+                "low": "The brand is on par with competitors with small differences."
+            }
+        },
+        {
+            "id": "C3",
+            "title": "Keyword gap per topic cluster against competitors",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Competitors rank for most high-intent keywords in a money cluster where the brand has no page.",
+                "high": "A money cluster has many competitor-ranked keywords the brand does not rank for.",
+                "medium": "A supporting cluster has a keyword gap the brand could close with existing pages.",
+                "low": "A small gap exists on low-volume or low-intent keywords."
+            }
+        },
+        {
+            "id": "C4",
+            "title": "Backlink and citation gap against competitors",
+            "theme": "seo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The brand has almost no referring domains while competitors have strong authority.",
+                "high": "Many authoritative domains link to several competitors but not to the brand.",
+                "medium": "A moderate set of linking domains or citations is missing compared with competitors.",
+                "low": "A few low-authority link or citation opportunities are missing."
+            }
+        },
+        {
+            "id": "D3",
+            "title": "Work proposals saved and awaiting review",
+            "theme": "lifecycle",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No work proposals were saved although the audit found high or critical problems.",
+                "high": "Proposals miss several high-severity findings.",
+                "medium": "Proposals exist but lack evidence links or clear scope.",
+                "low": "Proposals are complete with minor wording or grouping issues."
+            }
+        },
+        {
+            "id": "D4",
+            "title": "Cycle report and page-backed topic evidence delivered",
+            "theme": "lifecycle",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The cycle report is missing, so changes since the last audit are not reported.",
+                "high": "The cycle report omits topic evidence for the pages it discusses.",
+                "medium": "Topic evidence is present for some pages but not all in scope.",
+                "low": "The report is complete with minor gaps in page references."
+            }
+        },
+        {
+            "id": "D7",
+            "title": "Cohort-scoped GEO baseline delivered",
+            "theme": "geo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No GEO baseline exists, so later cycles cannot measure AI-answer change.",
+                "high": "The baseline is missing for a main market or the main prompt cohort.",
+                "medium": "The baseline is delivered but omits some cohort metrics.",
+                "low": "The baseline is complete with minor labelling gaps."
+            }
+        },
+        {
+            "id": "FIN1",
+            "title": "Requirements recorded from exact scoped evidence",
+            "theme": "lifecycle",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Requirements are recorded without evidence or contradict the evidence.",
+                "high": "Several requirements lack scoped evidence or cite the wrong scope.",
+                "medium": "Some requirements are vague or cite partial evidence.",
+                "low": "Requirements are complete with minor wording issues."
+            }
+        },
+        {
+            "id": "FIN2",
+            "title": "Audit sealed last, after requirements, evidence and disclosures",
+            "theme": "lifecycle",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The audit was sealed before requirements, evidence or disclosures were recorded.",
+                "high": "The audit was sealed with a required checklist row still missing.",
+                "medium": "The audit is ready to seal but the seal is pending.",
+                "low": "The seal is recorded with a minor ordering note."
+            }
+        },
+        {
+            "id": "FIN3",
+            "title": "Limitations and omitted scope disclosed",
+            "theme": "lifecycle",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Missing or degraded data is presented as a measured result with no disclosure.",
+                "high": "Major scope left out of the audit is not disclosed.",
+                "medium": "Limitations are disclosed but miss some partial or excluded rows.",
+                "low": "Limitations are complete but could be stated more plainly."
+            }
+        },
+        {
+            "id": "FIN4",
+            "title": "Final scoped checklist report written",
+            "theme": "lifecycle",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No checklist report exists for the sealed audit.",
+                "high": "The checklist report misstates row states or reasons.",
+                "medium": "The checklist report omits some rows or reasons.",
+                "low": "The report is complete with minor formatting issues."
+            }
+        },
+        {
+            "id": "G1",
+            "title": "GEO scan cohort reconciled",
+            "theme": "geo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No scan cohort exists, so AI visibility cannot be measured.",
+                "high": "The cohort misses the brand's main markets or engines in scope.",
+                "medium": "The cohort is reconciled but some prompts or engines failed to scan.",
+                "low": "The cohort is complete with minor labelling gaps."
+            }
+        },
+        {
+            "id": "G2",
+            "title": "AI-answer competitor set",
+            "theme": "geo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "AI answers recommend competitors for most category prompts and never mention the brand.",
+                "high": "Competitors are named in AI answers far more often than the brand.",
+                "medium": "The brand appears but trails one or two competitors in AI answers.",
+                "low": "The brand's AI-answer share is on par with competitors."
+            }
+        },
+        {
+            "id": "G3",
+            "title": "Approved independent category prompts scanned",
+            "theme": "geo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No approved category prompts were scanned.",
+                "high": "Fewer than half of the intended prompts completed.",
+                "medium": "Most prompts completed but some engines or markets failed.",
+                "low": "Nearly all prompts completed with a few retries outstanding."
+            }
+        },
+        {
+            "id": "G4",
+            "title": "AI answers analysed for mentions, sentiment and citations",
+            "theme": "geo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No answers were analysed, so visibility claims would be unsupported.",
+                "high": "Fewer than half of the collected answers were analysed.",
+                "medium": "Most answers were analysed but some engines are missing.",
+                "low": "Nearly all answers were analysed."
+            }
+        },
+        {
+            "id": "G5",
+            "title": "Cohort GEO metrics (mention rate, share of voice, citations)",
+            "theme": "geo",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The brand is absent from AI answers for its core category prompts.",
+                "high": "The brand is mentioned in a small share of answers or described incorrectly.",
+                "medium": "The brand is mentioned but rarely cited as a source.",
+                "low": "The brand is visible with small gaps on secondary prompts."
+            }
+        },
+        {
+            "id": "G6",
+            "title": "Source types cited in AI answers",
+            "theme": "geo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "AI answers cite sources that state wrong facts about the brand.",
+                "high": "AI answers cite third-party sources where the brand has no presence and never its own pages.",
+                "medium": "Owned pages are cited for some prompts but key source types are missing.",
+                "low": "The citation mix is healthy with minor gaps."
+            }
+        },
+        {
+            "id": "G7",
+            "title": "Overlap between organic rankings and AI-answer visibility",
+            "theme": "geo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The brand ranks organically for money topics but is absent from AI answers for all of them.",
+                "high": "Many money topics rank organically but are absent from AI answers.",
+                "medium": "Some topics show a gap between organic and AI visibility.",
+                "low": "Organic and AI visibility mostly agree."
+            }
+        },
+        {
+            "id": "K3",
+            "title": "Topic map changes proposed against the current version",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Money offerings have no topic or page mapping at all.",
+                "high": "The map leaves important topics unmapped or mapped to the wrong page.",
+                "medium": "The map needs updates for new topics or retired pages.",
+                "low": "The map needs only minor merges or renames."
+            }
+        },
+        {
+            "id": "K4",
+            "title": "Bounded research keyword SERP sample",
+            "theme": "seo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No SERP sample exists for the topics the plan depends on.",
+                "high": "The sample misses the main money keywords or markets.",
+                "medium": "The sample is partial for some topic clusters.",
+                "low": "The sample is complete with minor gaps."
+            }
+        },
+        {
+            "id": "M1",
+            "title": "Rescan schedule set",
+            "theme": "lifecycle",
+            "default_severity": "low",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No rescan schedule exists, so the audit can never be remeasured.",
+                "high": "The schedule does not cover the changed scope or main markets.",
+                "medium": "The schedule exists but its interval does not match the agreed cadence.",
+                "low": "The schedule is set with a minor detail to confirm."
+            }
+        },
+        {
+            "id": "M2",
+            "title": "Comparison with the baseline audit",
+            "theme": "seo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Key metrics fell sharply since the baseline on money pages or the whole site.",
+                "high": "Several key metrics declined since the baseline.",
+                "medium": "Results are mixed since the baseline or a comparison is partial.",
+                "low": "Results are stable or improving with minor declines."
+            }
+        },
+        {
+            "id": "M7",
+            "title": "Earlier findings revised into this audit",
+            "theme": "lifecycle",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Earlier critical findings were dropped without being re-checked.",
+                "high": "Many earlier open findings were not revised.",
+                "medium": "Some earlier findings were not revised or lack updated evidence.",
+                "low": "Nearly all earlier findings were revised."
+            }
+        },
+        {
+            "id": "M8",
+            "title": "Completed work verified",
+            "theme": "lifecycle",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Work marked completed is shown not to be live or to have caused harm.",
+                "high": "Several completed items are not live or show no effect.",
+                "medium": "Some completed items could not be verified.",
+                "low": "Nearly all completed items were verified."
+            }
+        },
+        {
+            "id": "MI",
+            "title": "Cycle intake: changes, predecessor findings and work reviewed",
+            "theme": "lifecycle",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The cycle started without linking the predecessor audit.",
+                "high": "Site or account changes since the predecessor were not reviewed.",
+                "medium": "Predecessor findings or work were only partly reviewed.",
+                "low": "Intake is complete with minor notes missing."
+            }
+        },
+        {
+            "id": "P1",
+            "title": "Priority pages selected and paired with benchmark URLs",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No priority pages were selected for analysis.",
+                "high": "Selected pages omit the brand's main money pages.",
+                "medium": "Pages are selected but some lack benchmark URLs.",
+                "low": "Selection is complete with minor pairing issues."
+            }
+        },
+        {
+            "id": "P2",
+            "title": "Page analyses with browser verification and benchmark comparison",
+            "theme": "content",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "A money page fails to render, hides its main content, or blocks conversion in the browser.",
+                "high": "A money page clearly trails its benchmarks on intent match, content depth or conversion path.",
+                "medium": "A page trails benchmarks on secondary elements such as headings, schema or internal links.",
+                "low": "A page has cosmetic or minor copy issues compared with benchmarks."
+            }
+        },
+        {
+            "id": "RF1",
+            "title": "Refresh diff against baseline, stale artifacts and observation queue",
+            "theme": "lifecycle",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The refresh ran without a baseline diff, so changes are unknown.",
+                "high": "Many stale artifacts remain unrefreshed.",
+                "medium": "The diff is partial or some observations are queued.",
+                "low": "The diff is complete with minor stale items."
+            }
+        },
+        {
+            "id": "RS1",
+            "title": "Markets, offerings, summary and owned hosts reviewed",
+            "theme": "lifecycle",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No markets or owned hosts are set, so the audit has no scope.",
+                "high": "Main markets, offerings or hosts are missing or wrong.",
+                "medium": "Some secondary offerings or hosts are missing.",
+                "low": "Context is complete with minor wording issues."
+            }
+        },
+        {
+            "id": "RS2",
+            "title": "Important pages and conversion goals reviewed",
+            "theme": "lifecycle",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No money pages or conversion goals are defined.",
+                "high": "Main money pages or goals are missing or wrong.",
+                "medium": "Some important pages or goals are missing.",
+                "low": "Minor gaps in page or goal lists."
+            }
+        },
+        {
+            "id": "RS3",
+            "title": "Competitors and aliases reviewed",
+            "theme": "lifecycle",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No competitors are set although competitor checks are in scope.",
+                "high": "Main competitors are missing.",
+                "medium": "Aliases or secondary competitors are missing.",
+                "low": "Minor gaps."
+            }
+        },
+        {
+            "id": "RS4",
+            "title": "Policies, connections, budgets and capability sources reviewed",
+            "theme": "lifecycle",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Required connections are broken, blocking the audit scope.",
+                "high": "A key connection or budget is missing for a checked source.",
+                "medium": "Some policies or sources are unreviewed.",
+                "low": "Minor gaps."
+            }
+        },
+        {
+            "id": "RS5",
+            "title": "Effective brand terms and matching revision pinned",
+            "theme": "lifecycle",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "No brand terms are set, so brand and non-brand search cannot be split.",
+                "high": "Brand terms miss the main brand name variants.",
+                "medium": "Some variants or misspellings are missing.",
+                "low": "Minor gaps."
+            }
+        },
+        {
+            "id": "RUN",
+            "title": "Audit opened with exact scope and independent baseline or predecessor",
+            "theme": "lifecycle",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The audit was not opened, so findings cannot be saved.",
+                "high": "The audit was opened with the wrong scope or predecessor.",
+                "medium": "The audit was opened with an incomplete checklist.",
+                "low": "The audit was opened with a minor label issue."
+            }
+        },
+        {
+            "id": "S1",
+            "title": "Site search trend (clicks and impressions over time)",
+            "theme": "seo",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Organic clicks to the site fell by more than half period over period.",
+                "high": "Organic clicks or impressions declined significantly.",
+                "medium": "Moderate decline or a flat trend in a growth market.",
+                "low": "Small fluctuations."
+            }
+        },
+        {
+            "id": "S2",
+            "title": "Decaying pages losing clicks over time",
+            "theme": "seo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Money pages lost most of their organic clicks.",
+                "high": "Several money pages show sustained click decay.",
+                "medium": "Supporting pages show decay.",
+                "low": "Minor decay on low-value pages."
+            }
+        },
+        {
+            "id": "S3",
+            "title": "Striking-distance keywords ranking just off page one",
+            "theme": "seo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Money keywords with high demand sit just off page one with no plan.",
+                "high": "Many valuable keywords rank in positions 4 to 20.",
+                "medium": "Some keywords are in striking distance.",
+                "low": "Few striking-distance opportunities."
+            }
+        },
+        {
+            "id": "S4",
+            "title": "Low click-through rate for the ranking position",
+            "theme": "seo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Money pages get almost no clicks despite top positions.",
+                "high": "Many high-impression queries have CTR well below their position's norm.",
+                "medium": "Some queries have low CTR.",
+                "low": "Minor CTR shortfalls."
+            }
+        },
+        {
+            "id": "S5",
+            "title": "Keyword cannibalization between pages",
+            "theme": "seo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Several pages split the brand's main money query, and none ranks well.",
+                "high": "Money queries alternate between pages, depressing rankings.",
+                "medium": "Some queries are split between pages.",
+                "low": "Minor overlap."
+            }
+        },
+        {
+            "id": "S6",
+            "title": "Traffic channels and AI-assistant referrals",
+            "theme": "seo",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Organic traffic collapsed or tracking of channels is broken.",
+                "high": "Organic share is falling sharply or AI referrals are unattributed.",
+                "medium": "Moderate shifts between channels.",
+                "low": "Small changes."
+            }
+        },
+        {
+            "id": "S7",
+            "title": "Key events (conversions) from organic and AI traffic",
+            "theme": "seo",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Organic traffic produces no key events, or none are tracked.",
+                "high": "Organic key events fell significantly.",
+                "medium": "Some landing pages underperform on key events.",
+                "low": "Small changes."
+            }
+        },
+        {
+            "id": "T1",
+            "title": "Indexability of pages (status codes, noindex)",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Money pages or the whole site are blocked from indexing or return errors.",
+                "high": "Some money pages are non-200 or noindex.",
+                "medium": "Supporting pages are non-indexable by mistake.",
+                "low": "A few low-value pages have indexability issues."
+            }
+        },
+        {
+            "id": "T2",
+            "title": "Canonical tags and Google-selected canonicals",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Money pages canonicalize to another URL or Google ignores their canonical site-wide.",
+                "high": "Several money pages have canonical conflicts or Google picks another canonical.",
+                "medium": "Supporting pages have canonical conflicts.",
+                "low": "Minor canonical inconsistencies on low-value pages."
+            }
+        },
+        {
+            "id": "T3",
+            "title": "Hreflang and alternate links",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Hreflang sends users in a main market to the wrong locale.",
+                "high": "Many hreflang tags lack return links or point to non-200 pages.",
+                "medium": "Some locales have hreflang errors.",
+                "low": "Minor hreflang issues."
+            }
+        },
+        {
+            "id": "T4",
+            "title": "Redirects and redirect chains",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Money pages redirect in loops or to errors.",
+                "high": "Many internal links pass through chains of 2 or more hops.",
+                "medium": "Some redirect chains exist.",
+                "low": "A few single-hop redirects remain in internal links."
+            }
+        },
+        {
+            "id": "T5",
+            "title": "Sitemap versus crawled versus indexed pages",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Money pages are missing from the index and the sitemap.",
+                "high": "Many sitemap URLs are non-200, noindex or non-canonical, or money pages are not indexed.",
+                "medium": "Some indexed pages are missing from the sitemap.",
+                "low": "Minor sitemap hygiene issues."
+            }
+        },
+        {
+            "id": "T6",
+            "title": "Orphan pages, click depth and internal link equity",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Money pages are orphaned with no internal links.",
+                "high": "Money pages sit more than 3 clicks deep or internal links point to 4xx/5xx pages.",
+                "medium": "Supporting pages are orphaned or deep.",
+                "low": "Minor internal linking gaps."
+            }
+        },
+        {
+            "id": "T7",
+            "title": "Duplicate pages and URL parameters",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "Parameter duplicates replace money pages in the index.",
+                "high": "Many duplicate URLs compete with money pages.",
+                "medium": "Some parameter duplicates are indexable.",
+                "low": "Minor duplicates."
+            }
+        },
+        {
+            "id": "T9",
+            "title": "Whether search and AI crawlers can reach, read and identify the site",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "robots.txt blocks Googlebot from the site or money pages.",
+                "high": "robots.txt blocks AI search or user-fetch crawlers (search_index or user_fetch role) from pages the brand wants cited.",
+                "medium": "No sitemap is declared, some sections are blocked unintentionally, or training crawlers are blocked without the brand having chosen it.",
+                "low": "Minor robots.txt hygiene issues."
+            }
+        },
+        {
+            "id": "missing_organization_identity",
+            "title": "Home page does not identify the organisation in structured data",
+            "theme": "technical",
+            "default_severity": "low",
+            "owner": "agent",
+            "basis": null,
+            "rubric": {
+                "critical": "The home page's Organization (or subtype) schema names a different organisation or site than the approved brand profile.",
+                "high": "The home page has no Organization (or subtype) schema, or only JavaScript injects it, and the brand's name is short or ambiguous.",
+                "medium": "The home page has no Organization (or subtype) schema, or only JavaScript injects it.",
+                "low": "The Organization schema is present but lacks a logo, sameAs profiles or contact details."
+            }
+        },
+        {
+            "id": "missing_title",
+            "title": "Page has no title",
+            "theme": "content",
+            "default_severity": "high",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages or most indexable pages have no title, so search results show text Google picks.",
+                "high": "Several indexable pages with traffic have no title.",
+                "medium": "A few indexable pages without traffic have no title.",
+                "low": "Only pages unlikely to rank have no title."
+            }
+        },
+        {
+            "id": "title_too_long",
+            "title": "Title longer than 60 characters",
+            "theme": "content",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Most money page titles are cut so badly that the offer or brand is lost.",
+                "high": "Titles of pages with traffic are cut before their main keyword.",
+                "medium": "Some titles are cut after their main keyword.",
+                "low": "A few titles run slightly long with nothing important cut."
+            }
+        },
+        {
+            "id": "title_too_short",
+            "title": "Title shorter than 20 characters",
+            "theme": "content",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages carry one-word titles that say nothing of the offer.",
+                "high": "Titles of pages with traffic miss their main keyword for lack of length.",
+                "medium": "Some short titles could carry more of the page's topic.",
+                "low": "A few short titles that still describe the page."
+            }
+        },
+        {
+            "id": "duplicate_title",
+            "title": "Title shared with another indexable page",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages share titles, so Google cannot tell which one answers a query.",
+                "high": "Many indexable pages with traffic share their title with another page across the site.",
+                "medium": "Some indexable pages share a title.",
+                "low": "A few low-value pages share a title."
+            }
+        },
+        {
+            "id": "missing_meta_description",
+            "title": "Page has no meta description",
+            "theme": "content",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages have no description, so their result text is left to Google.",
+                "high": "Most pages with traffic have no description.",
+                "medium": "Some pages with traffic have no description.",
+                "low": "Only pages unlikely to rank have no description."
+            }
+        },
+        {
+            "id": "missing_h1",
+            "title": "Page has no H1 heading",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages have no H1, so their main topic is not stated on the page.",
+                "high": "Several pages with traffic have no H1.",
+                "medium": "Some pages have no H1.",
+                "low": "Only utility pages have no H1."
+            }
+        },
+        {
+            "id": "multiple_h1",
+            "title": "Page has more than one H1 heading",
+            "theme": "content",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages have competing H1s naming different topics.",
+                "high": "Many pages with traffic across the site have several H1s.",
+                "medium": "Some pages repeat their H1.",
+                "low": "A few pages have a second H1 that repeats the first."
+            }
+        },
+        {
+            "id": "thin_content",
+            "title": "Guide, blog, category, product or comparison page under 250 words",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "agent",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages are too thin to answer the queries they target.",
+                "high": "Several pages with traffic are thin.",
+                "medium": "Some pages without traffic are thin.",
+                "low": "A few pages are thin by design, such as short listings."
+            }
+        },
+        {
+            "id": "non_200_status",
+            "title": "Page did not answer 200",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages or the home page answer 4xx or 5xx.",
+                "high": "Pages with traffic or inlinks answer 4xx or 5xx.",
+                "medium": "Some pages without traffic answer 4xx or 5xx.",
+                "low": "A few retired pages answer 404 as intended but are still known."
+            }
+        },
+        {
+            "id": "redirect_chain",
+            "title": "Redirect chain of two or more hops",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages are reached through long chains that lose link equity.",
+                "high": "Pages with traffic are reached through chains of three or more hops.",
+                "medium": "Some pages are reached through two hops.",
+                "low": "A few old URLs reach their page through two hops."
+            }
+        },
+        {
+            "id": "canonical_mismatch",
+            "title": "Canonical points to another URL",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages declare another page canonical and drop out of results.",
+                "high": "Pages with traffic declare a canonical that differs from their URL.",
+                "medium": "Some pages declare a canonical elsewhere, possibly by design.",
+                "low": "A few variant pages canonicalise to their main page as intended."
+            }
+        },
+        {
+            "id": "noindex",
+            "title": "Page is noindex",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages or the home page are noindex.",
+                "high": "Pages with traffic or that should rank are noindex.",
+                "medium": "Some content pages are noindex, possibly by design.",
+                "low": "Only utility pages are noindex, as intended."
+            }
+        },
+        {
+            "id": "blocked_by_robots",
+            "title": "Page blocked by robots.txt",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages or the home page are disallowed for Googlebot.",
+                "high": "Pages with traffic are disallowed.",
+                "medium": "Some content pages are disallowed, possibly by design.",
+                "low": "Only utility pages are disallowed, as intended."
+            }
+        },
+        {
+            "id": "orphan_page",
+            "title": "No internal link reaches the page",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages are orphans among the captured pages.",
+                "high": "Pages with traffic are orphans.",
+                "medium": "Some pages without traffic are orphans.",
+                "low": "A few campaign pages are orphans by design."
+            }
+        },
+        {
+            "id": "deep_page",
+            "title": "Page more than three clicks from home",
+            "theme": "technical",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages are more than three clicks from home.",
+                "high": "Pages with traffic sit deep in the site.",
+                "medium": "Some pages without traffic sit deep in the site.",
+                "low": "A few archive pages sit deep by design."
+            }
+        },
+        {
+            "id": "missing_schema",
+            "title": "Page has no structured data",
+            "theme": "technical",
+            "default_severity": "low",
+            "owner": "agent",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages that qualify for rich results carry no schema.",
+                "high": "Pages with traffic carry no schema.",
+                "medium": "Some pages that could use schema carry none.",
+                "low": "Only pages where schema adds nothing carry none."
+            }
+        },
+        {
+            "id": "missing_alt_text",
+            "title": "Images without alt text",
+            "theme": "content",
+            "default_severity": "low",
+            "owner": "agent",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages' main images have no alt text.",
+                "high": "Pages with traffic have images without alt text.",
+                "medium": "Some pages have images without alt text.",
+                "low": "Only decorative images lack alt text."
+            }
+        },
+        {
+            "id": "slow_lcp",
+            "title": "Largest Contentful Paint over 2.5 seconds",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages' LCP is over 4 seconds.",
+                "high": "Money or high-traffic pages' LCP is between 2.5 and 4 seconds.",
+                "medium": "Other measured pages' LCP is over 2.5 seconds.",
+                "low": "LCP is just over 2.5 seconds on low-traffic pages."
+            }
+        },
+        {
+            "id": "poor_cls",
+            "title": "Cumulative Layout Shift over 0.1",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages' CLS is over 0.25.",
+                "high": "Money or high-traffic pages' CLS is between 0.1 and 0.25.",
+                "medium": "Other measured pages' CLS is over 0.1.",
+                "low": "CLS is just over 0.1 on low-traffic pages."
+            }
+        },
+        {
+            "id": "google_canonical_differs",
+            "title": "Google chose another canonical",
+            "theme": "technical",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Google treats money pages as duplicates of other pages.",
+                "high": "Google chose another canonical for pages with traffic.",
+                "medium": "Google chose another canonical for some pages.",
+                "low": "Google folded a few variant pages into their main page as intended."
+            }
+        },
+        {
+            "id": "invalid_schema",
+            "title": "Structured data block is not valid JSON",
+            "theme": "technical",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages' only schema is invalid, so no rich result can show.",
+                "high": "Pages with traffic carry invalid schema.",
+                "medium": "Some pages carry an invalid block beside valid ones.",
+                "low": "A few pages carry an invalid block of no consequence."
+            }
+        },
+        {
+            "id": "missing_canonical",
+            "title": "Indexable page declares no canonical",
+            "theme": "technical",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages with URL variants declare no canonical.",
+                "high": "Pages with traffic and parameter variants declare no canonical.",
+                "medium": "Some indexable pages declare no canonical.",
+                "low": "A few pages without variants declare no canonical."
+            }
+        },
+        {
+            "id": "redirect_loop",
+            "title": "Redirects loop back to a URL already visited",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages or the home page are unreachable in a redirect loop.",
+                "high": "Pages with traffic or inlinks loop.",
+                "medium": "Some pages without traffic loop.",
+                "low": "A few retired URLs loop."
+            }
+        },
+        {
+            "id": "internal_link_to_redirect",
+            "title": "Internal link points to a redirecting URL",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Navigation or money pages link to redirects site-wide.",
+                "high": "Pages with traffic link to redirects.",
+                "medium": "Some pages link to redirects.",
+                "low": "A few old links point to redirects."
+            }
+        },
+        {
+            "id": "broken_internal_link",
+            "title": "Internal link points to a URL answering 400 or above",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Navigation or money pages link to broken URLs.",
+                "high": "Pages with traffic link to broken URLs.",
+                "medium": "Some pages link to broken URLs.",
+                "low": "A few old posts link to broken URLs."
+            }
+        },
+        {
+            "id": "backlinks_to_broken_pages",
+            "title": "Outside sites link to pages that answer 4xx or 5xx",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Strong domains link to money pages or the home page that answer 4xx or 5xx.",
+                "high": "Domains with real authority link to dead pages whose links are wasted.",
+                "medium": "A few weaker domains link to dead pages.",
+                "low": "Only low-rank or spammy domains link to dead pages."
+            }
+        },
+        {
+            "id": "internal_nofollow",
+            "title": "Internal link marked nofollow",
+            "theme": "technical",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Navigation links to money pages are nofollow.",
+                "high": "Links from pages with traffic to important pages are nofollow.",
+                "medium": "Some internal links are nofollow.",
+                "low": "Only links to login or utility pages are nofollow."
+            }
+        },
+        {
+            "id": "sitemap_non_indexable",
+            "title": "Sitemap lists a noindex or canonicalised page",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Most sitemap URLs are noindex or canonicalised elsewhere.",
+                "high": "Many sitemap URLs are noindex or canonicalised elsewhere.",
+                "medium": "Some sitemap URLs are noindex or canonicalised elsewhere.",
+                "low": "A few sitemap URLs are noindex or canonicalised elsewhere."
+            }
+        },
+        {
+            "id": "sitemap_url_error",
+            "title": "Sitemap lists a page that answered 400 or above",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Most sitemap URLs answer 4xx or 5xx.",
+                "high": "Many sitemap URLs answer 4xx or 5xx.",
+                "medium": "Some sitemap URLs answer 4xx or 5xx.",
+                "low": "A few retired URLs remain in the sitemap."
+            }
+        },
+        {
+            "id": "missing_from_sitemap",
+            "title": "Indexable page listed in no sitemap",
+            "theme": "technical",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages are listed in no sitemap.",
+                "high": "Pages with traffic are listed in no sitemap.",
+                "medium": "Some indexable pages are listed in no sitemap.",
+                "low": "A few pages that do not need listing are missing."
+            }
+        },
+        {
+            "id": "duplicate_meta_description",
+            "title": "Meta description shared with another indexable page",
+            "theme": "content",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages share one description.",
+                "high": "Many pages with traffic share their description with another page across the site.",
+                "medium": "Some pages share a description.",
+                "low": "A few low-value pages share a description."
+            }
+        },
+        {
+            "id": "duplicate_content",
+            "title": "Visible text identical to another indexable page",
+            "theme": "content",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages are exact copies of other indexable pages.",
+                "high": "Pages with traffic are exact copies of other pages.",
+                "medium": "Some indexable pages are exact copies.",
+                "low": "A few variant pages are exact copies of their main page."
+            }
+        },
+        {
+            "id": "money_page_no_impressions",
+            "title": "Indexable money page without Search Console impressions in 28 days",
+            "theme": "seo",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Most money pages had no impressions in 28 days.",
+                "high": "Several money pages had no impressions in 28 days.",
+                "medium": "One money page had no impressions in 28 days.",
+                "low": "A new money page had no impressions yet."
+            }
+        },
+        {
+            "id": "hreflang_missing_return",
+            "title": "Hreflang alternate does not link back",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Most hreflang pairs of money pages have no return link, so Google ignores them.",
+                "high": "Many hreflang pairs have no return link.",
+                "medium": "Some hreflang pairs have no return link.",
+                "low": "A few hreflang pairs to minor locales have no return link."
+            }
+        },
+        {
+            "id": "hreflang_invalid_code",
+            "title": "Hreflang value is not a valid language or region",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages' hreflang codes are invalid, so no alternate counts.",
+                "high": "Many hreflang codes are invalid.",
+                "medium": "Some hreflang codes are invalid.",
+                "low": "A few hreflang codes are invalid on minor locales."
+            }
+        },
+        {
+            "id": "hreflang_target_not_200",
+            "title": "Hreflang alternate did not answer 200",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages' hreflang alternates redirect or fail.",
+                "high": "Many hreflang alternates redirect or fail.",
+                "medium": "Some hreflang alternates redirect or fail.",
+                "low": "A few hreflang alternates to minor locales redirect."
+            }
+        },
+        {
+            "id": "mixed_content",
+            "title": "HTTPS page loads http resources",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages load http scripts or stylesheets, which browsers block.",
+                "high": "Pages with traffic load http scripts, stylesheets or frames.",
+                "medium": "Some pages load http images or media.",
+                "low": "A few low-value pages load an http resource."
+            }
+        },
+        {
+            "id": "ai_content_requires_js",
+            "title": "Page content needs JavaScript, which AI crawlers do not run",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "The home page or money pages show AI crawlers almost none of their text or no H1 without JavaScript.",
+                "high": "Pages with traffic or AI citations lose almost all of their text or their H1 without JavaScript.",
+                "medium": "Supporting pages lose almost all of their text or their H1 without JavaScript.",
+                "low": "A few low-value pages, or only secondary parts of pages, render with JavaScript."
+            }
+        },
+        {
+            "id": "schema_requires_js",
+            "title": "Structured data appears only after JavaScript",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "The home page or money pages carry their Organization, product or review markup only after JavaScript.",
+                "high": "Pages with traffic or rich-result eligibility carry their structured data only after JavaScript.",
+                "medium": "Supporting pages carry some structured data only after JavaScript.",
+                "low": "Only secondary markup (a breadcrumb, say) appears after JavaScript."
+            }
+        },
+        {
+            "id": "ai_crawler_blocked",
+            "title": "AI crawlers are blocked from the page",
+            "theme": "technical",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "The site refuses requests made as AI search and answer user agents, while it answers WorkPods' plain request, on the home page or money pages (a firewall or bot rule), or robots.txt disallows the AI search and answer crawlers there.",
+                "high": "robots.txt or a firewall keeps AI search and answer crawlers (OAI-SearchBot, ChatGPT-User, Claude-User, PerplexityBot) from pages with traffic.",
+                "medium": "AI search and answer crawlers are kept from some supporting pages.",
+                "low": "AI search and answer crawlers are kept only from a few low-value pages. A block of training crawlers alone never fires this check: it is the brand's policy. Nor does a refusal of WorkPods' own plain request: whether AI crawlers can read the page is then unknown, and the check is not measured."
+            }
+        },
+        {
+            "id": "soft_404",
+            "title": "Page answers 200 but renders the home page",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages, or a large share of a section (a blog, a product range), answer 200 but render the home page: their canonical names the root or their visible text is the root's.",
+                "high": "Pages with traffic or backlinks answer 200 but render the home page.",
+                "medium": "Some pages without traffic answer 200 but render the home page.",
+                "low": "Only a few retired or legacy URLs answer 200 with the home page instead of redirecting or answering 404."
+            }
+        },
+        {
+            "id": "browser_redirect",
+            "title": "Page answers 200 but a script sends the visitor to another address",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "Money pages or the home page answer 200 to a plain request, but a script or meta refresh moves every visitor elsewhere, so search engines may index a page no visitor sees.",
+                "high": "Pages with traffic or many internal links move visitors elsewhere with a script instead of an HTTP redirect.",
+                "medium": "Some supporting pages, such as a language or section page, move visitors elsewhere with a script.",
+                "low": "Only account or sign-in pages send signed-out visitors to a login page, which is usually intended."
+            }
+        },
+        {
+            "id": "google_not_indexed",
+            "title": "Google did not index an indexable page",
+            "theme": "seo",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Money pages or the home page are indexable but Google crawled or discovered them and left them out of its index.",
+                "high": "Pages listed in a sitemap, or pages with traffic before, are indexable but Google left them out of its index.",
+                "medium": "Some indexable supporting pages are crawled or discovered but not indexed.",
+                "low": "Only a few low-value indexable pages, such as tag or archive pages, are not indexed."
+            }
+        },
+        {
+            "id": "google_fetch_blocked",
+            "title": "Google's crawl of the page was refused",
+            "theme": "technical",
+            "default_severity": "high",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Google's crawl of money pages or the home page was refused (403, 401, another 4xx or a server error), so they can drop out of search.",
+                "high": "Google's crawl of pages with traffic or listed in a sitemap was refused.",
+                "medium": "Google's crawl of some supporting pages was refused.",
+                "low": "Google's crawl was refused only on a few low-value pages, or on pages meant to stay private."
+            }
+        },
+        {
+            "id": "schema_properties_missing",
+            "title": "Structured data lacks properties recommended for its type",
+            "theme": "technical",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "The home page's Organization or money pages' Product, Service or LocalBusiness markup leaves out its name, address, offers or URL, so agents and search engines get an incomplete picture of the business.",
+                "high": "Pages with traffic declare Article, FAQPage or Product markup without the properties usually recommended for the type.",
+                "medium": "Supporting pages declare markup without some recommended properties.",
+                "low": "Only secondary markup (a breadcrumb, say) on a few pages lacks a recommended property. This is a completeness recommendation by presence, not a rich-result requirement or validation."
+            }
+        },
+        {
+            "id": "webmcp_tool_incomplete",
+            "title": "WebMCP tool declaration lacks a description or a field description",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "rendered",
+            "rubric": {
+                "critical": "A money page's tool declaration (booking, quote, checkout) has no tooldescription, so Chrome does not register it and agents cannot call it.",
+                "high": "A money page's tool has fields with no description or associated label, so an agent must guess what to enter.",
+                "medium": "Tools on supporting pages lack a description or a field description.",
+                "low": "Only an optional field of a secondary tool lacks a description."
+            }
+        },
+        {
+            "id": "controls_unlabelled",
+            "title": "Buttons, links or form fields on a money page have no accessible name",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "The primary action of money pages (book, buy, contact, sign up) is a button or field with no name, so agents and screen readers cannot find it.",
+                "high": "Form fields or buttons on money pages have no name or label.",
+                "medium": "Some links or icon buttons on money pages have no name.",
+                "low": "Only decorative or duplicate links on a few money pages have no name."
+            }
+        },
+        {
+            "id": "llms_txt_invalid",
+            "title": "The site's llms.txt breaks the llms.txt format",
+            "theme": "technical",
+            "default_severity": "low",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "Never critical: llms.txt is optional and no major AI assistant is known to depend on it.",
+                "high": "The site points agents at its llms.txt (a Link header or its docs) as the way to read it, and the file has no H1 title, so tools that follow llmstxt.org reject it.",
+                "medium": "The site's main llms.txt has no H1 title, so tools that follow llmstxt.org cannot read its name or sections.",
+                "low": "An llms.txt breaks the format on a secondary host. A site without an llms.txt never fires this check: the file is optional."
+            }
+        },
+        {
+            "id": "agent_manifest_invalid",
+            "title": "An agent manifest on the site is broken or only legacy",
+            "theme": "technical",
+            "default_severity": "medium",
+            "owner": "server",
+            "basis": "http",
+            "rubric": {
+                "critical": "The brand's MCP server or A2A agent is how customers' agents buy, book or get support, and its card is broken or names a card that is not there, so agents cannot connect.",
+                "high": "The AI catalog, an MCP server card or the A2A agent card lacks required fields (a name, version, endpoint or skills), so agents that discover it cannot use it.",
+                "medium": "A manifest has invalid values (a malformed server name, an unknown transport), or the only manifest is the legacy ai-plugin.json, which no assistant reads any more.",
+                "low": "Only an optional part of a manifest is wrong, on a secondary host. A site with no manifest never fires this check: manifests are optional."
+            }
+        }
+    ]
+}

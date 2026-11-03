@@ -1,0 +1,213 @@
+/* ---------------------------------------------------------------------------
+   The design tokens: the dashboard, the public pages, onboarding, social cards
+   and the plugin's gap report all use this one palette: neutral ink on white,
+   deep aubergine for the brand (dark panels, buttons, links), and colour
+   otherwise only for status, chart series and the logo. It is the only place a
+   token or a raw colour may be defined; the plugin's report theme is a copy
+   that its tests hold to these values. Surfaces differ only in type scale and
+   density. Contrast pairs used for text are checked at AA by platform.test.tsx.
+--------------------------------------------------------------------------- */
+
+:root {
+  color-scheme: light;
+
+  /* Type: six sizes, three weights. Body text is 14px; nothing is set below
+     12px. Labels are sentence case in --fs-caption, --fw-medium, --ink-2.
+     Mono is for ids and code only. */
+  --font-ui:
+    'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+
+  --fs-caption: 12px; /* labels, axis ticks, meta */
+  --fs-body: 14px; /* body, tables, tooltips */
+  --fs-lead: 16px; /* card and section titles */
+  --fs-title: 20px; /* sub-page titles */
+  --fs-page: 24px; /* page titles */
+  --fs-display: 32px; /* KPI values */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-strong: 600;
+
+  /* Neutrals: one true-neutral ramp. --ink-3 still clears AA for small text
+     on --surface and --canvas, so it may carry axis ticks and meta. */
+  --ink-1: #0b0b0c;
+  --ink-2: #45454b;
+  --ink-3: #63636a;
+  --line: rgba(11, 11, 12, 0.1);
+  --line-strong: rgba(11, 11, 12, 0.18);
+  --line-faint: rgba(11, 11, 12, 0.05);
+  --canvas: #fafafa;
+  --surface: #ffffff;
+  --surface-sunken: #f5f5f7;
+  --surface-strong: #e9e9ec;
+  --surface-hover: rgba(74, 26, 85, 0.04);
+
+  /* Brand accent: deep plum. Buttons, links, active navigation, focus and
+     selection. Never a field colour. */
+  --accent: #4a1a55;
+  --accent-strong: #33103c;
+  --accent-soft: #f4eef6;
+  --accent-muted: #dccbe2;
+  --on-accent: #ffffff; /* text or icon on an --accent or --status-bad-fg fill */
+  /* Solid, so the indicator clears 3:1 against any surface. A dark panel sets
+     --focus to its light ink. */
+  --focus: var(--accent);
+  --focus-ring: 0 0 0 2px var(--focus);
+
+  /* Dark panels: the aubergine slab (near black, purple in the light), its
+     raised cards and lines, and the two inks on it (--on-dark-2 is 8:1 on
+     --slab). */
+  --slab: #1a0a20;
+  --slab-raised: #26132e;
+  --slab-line: rgba(255, 255, 255, 0.12);
+  --on-dark-1: #f7f3f8;
+  --on-dark-2: #b3a3ba;
+  --on-dark-fill: rgba(255, 255, 255, 0.06);
+  --on-dark-line: rgba(255, 255, 255, 0.16);
+  --slab-glow: rgba(176, 92, 196, 0.24); /* the plum light at a dark hero's edge */
+
+  /* Status: one ramp. Every -fg clears AA on its -bg and on white, so the
+     same value marks a badge, a delta, a dot or a chart series. Severity,
+     delta, standing and lifecycle all map onto it; good/bad is meaning, not
+     direction (a falling CPC is good). */
+  --status-good-fg: #15724c;
+  --status-good-bg: #e4f4ec;
+  --status-warning-fg: #8a6206;
+  --status-warning-bg: #fbf3df;
+  --status-bad-fg: #c4154c;
+  --status-bad-bg: #fbe9f0;
+  --status-info-fg: #0b6f8f;
+  /* The status inks on a dark panel. */
+  --status-good-on-dark: #3ecf6f;
+  --status-warning-on-dark: #f5b83d;
+  --status-bad-on-dark: #ff7086;
+  --status-info-bg: #e3f3f8;
+  --status-neutral-fg: var(--ink-2);
+  --status-neutral-bg: var(--surface-sunken);
+  /* Severity "high" sits between bad (critical) and warning (medium). */
+  --severity-high-fg: #b03a0a;
+  --severity-high-bg: #fdefe6;
+  /* Row tints for ahead/behind standings: faint enough to keep body ink AA. */
+  --tint-good: rgba(21, 114, 76, 0.07);
+  --tint-bad: rgba(196, 21, 76, 0.06);
+
+  /* Charts: series colours only, fixed per entity, never per rank. --chart-1
+     is always the subject brand; competitors hash into 2..8. CVD-checked and
+     at least 3:1 on white. Pod colours fail both tests, so never a series. */
+  --chart-1: #0061ed; /* blue */
+  --chart-2: #7c3aed; /* violet */
+  --chart-3: #0f8a8a; /* teal */
+  --chart-4: #b03a0a; /* rust */
+  --chart-5: #4d7c0f; /* olive */
+  --chart-6: #9d174d; /* magenta */
+  --chart-7: #a16207; /* gold */
+  --chart-8: #475569; /* slate */
+  --chart-other: #a1a5ae; /* the collapsed "Others" series */
+  --chart-prev: #b3b7bf; /* the previous-period line */
+  --chart-grid: var(--line);
+  --chart-axis: var(--ink-3);
+
+  /* The logo's own fills, for the mark only. */
+  --logo-red: #ea0c17;
+  --logo-blue: #0061ed;
+  --logo-green: #09b72a;
+  --logo-orange: #fd9301;
+
+  /* AI-surface chip icons: decorative; the chip's text carries the name. */
+  --ai-chatgpt: #10a37f;
+  --ai-perplexity: #1fb8cd;
+  --ai-gemini: #7c83ef;
+  --ai-copilot: #0ea5e9;
+  --ai-grok: #8b8ea3;
+  --ai-google: #4285f4;
+
+  /* Spacing: a 4px base. */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 56px;
+
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: 14px;
+  --radius-pill: 999px;
+
+  /* Elevation: cards sit flat on the page; menus, dialogs and tooltips float. */
+  --shadow-float: 0 12px 32px rgba(16, 16, 18, 0.12);
+
+  /* Overlays */
+  --backdrop: rgba(26, 10, 32, 0.45);
+  --shimmer-highlight: rgba(255, 255, 255, 0.75);
+  --tooltip-bg: var(--slab);
+  --header-glass: rgba(255, 255, 255, 0.8);
+
+  /* Every positioned layer uses one of these. Dropdowns are portaled to
+     <body>, including selects inside dialogs, so they sit above dialogs. */
+  --z-header: 40;
+  --z-drawer: 60;
+  --z-dialog: 70;
+  --z-dropdown: 75;
+  --z-toast: 80;
+  --z-tooltip: 90;
+
+  /* Motion: every transition and animation runs on these. */
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-fast: 0.18s;
+  --motion-base: 0.3s;
+  --motion-slow: 0.55s;
+
+  /* The consent panel's side margin. */
+  --gutter: clamp(1.25rem, 5vw, 3rem);
+}
+
+/* The public site (workpods.ai) shares the palette above and adds only its scale: one typeface set
+   large and tight (DESIGN: agentpod.com's system, our content), fluid from a 390px phone to a
+   1440px desktop, and the soft shadows of its floating cards. Its pages set data-site on <html>
+   (site.html), so these values never reach the dashboard. */
+:root[data-site] {
+  --frame-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.45);
+  --card-shadow: 0 20px 50px -30px rgba(0, 0, 0, 0.18);
+  --scroll-shade: rgba(0, 0, 0, 0.14);
+  --wordmark: rgba(255, 255, 255, 0.06);
+
+  --site-hero: clamp(2.75rem, 1.05rem + 7vw, 7.25rem);
+  --site-h1: clamp(2.375rem, 1.35rem + 4.2vw, 4.75rem);
+  --site-h2: clamp(2rem, 1.15rem + 3.5vw, 4.25rem);
+  --site-h3: clamp(1.125rem, 1.04rem + 0.35vw, 1.375rem);
+  --site-numeral: clamp(2.25rem, 1.7rem + 2.2vw, 3.5rem);
+  --site-lede: clamp(1.0625rem, 0.99rem + 0.3vw, 1.25rem);
+  --site-body: 1rem;
+  --site-small: 0.875rem;
+  --site-label: 0.6875rem;
+
+  --site-tight: -0.045em;
+  --site-measure: 64ch;
+  --site-container: 1200px;
+  --site-gutter: clamp(1rem, 0.6rem + 1.9vw, 3rem);
+  --site-section: clamp(4.5rem, 3rem + 5.5vw, 8.5rem);
+  --site-slab-inset: clamp(0.5rem, 0.3rem + 0.6vw, 0.875rem);
+  --site-radius: 16px;
+  --site-radius-card: 22px;
+  --site-radius-slab: clamp(22px, 1.2rem + 0.5vw, 30px);
+}
+
+/* The app's link reset: in-app navigation reads as text that underlines on
+   hover or focus; only external URLs (UrlLink) look like links. Zero
+   specificity so any module class wins, and scoped to the authenticated app
+   (AuthenticatedShell sets the attribute) so the homepage keeps its own. */
+:where(:root[data-surface='app'] a) {
+  color: inherit;
+  text-decoration: none;
+}
+
+:where(:root[data-surface='app'] a:hover, :root[data-surface='app'] a:focus-visible) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

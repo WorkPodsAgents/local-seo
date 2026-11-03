@@ -1,0 +1,35 @@
+{
+  "name": "@local-seo/extension",
+  "author": "Shefali Munjal",
+  "license": "Apache-2.0",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "typecheck": "wxt prepare && tsc -p .",
+    "postinstall": "wxt prepare",
+    "test": "vitest run",
+    "build:e2e": "wxt build --mode e2e",
+    "e2e": "wxt build --mode e2e && node e2e/smoke.mjs",
+    "zip:store": "LOCAL_SEO_STORE_UPLOAD=1 wxt zip",
+    "zip:firefox": "wxt zip --browser firefox --mv3",
+    "build:firefox": "wxt build --browser firefox --mv3"
+  },
+  "dependencies": {
+    "@local-seo/core": "*",
+    "@open-agent-ready/core": "*",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "@wxt-dev/module-react": "1.2.2",
+    "fake-indexeddb": "6.2.7",
+    "linkedom": "0.18.15",
+    "wxt": "0.21.5"
+  }
+}

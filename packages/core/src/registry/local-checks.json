@@ -1,0 +1,373 @@
+{
+  "checks": [
+    {
+      "id": "L1",
+      "title": "Phone number listed",
+      "layer": "local",
+      "group": "profile_basics",
+      "severity": "high",
+      "rubric": "A profile without a phone number loses calls from the Maps panel, the most common action local searchers take.",
+      "fix": "Add the main local phone number in the profile's contact section; use a local number, not a call centre."
+    },
+    {
+      "id": "L2",
+      "title": "Website linked",
+      "layer": "local",
+      "group": "profile_basics",
+      "severity": "high",
+      "rubric": "Without a website link the profile cannot send visitors on, and Google has no site to confirm the business against.",
+      "fix": "Link the website page for this location (a location page for multi-location brands, otherwise the home page)."
+    },
+    {
+      "id": "L3",
+      "title": "Opening hours listed",
+      "layer": "local",
+      "group": "profile_basics",
+      "severity": "high",
+      "rubric": "Missing hours make Google show no open/closed state and push searchers who filter by 'Open now' elsewhere.",
+      "fix": "Add regular opening hours for every day, and special hours for holidays."
+    },
+    {
+      "id": "L4",
+      "title": "Profile claimed",
+      "layer": "local",
+      "group": "profile_basics",
+      "severity": "high",
+      "rubric": "An unclaimed profile can be edited by anyone and the owner cannot reply to reviews or post updates.",
+      "fix": "Claim and verify the profile with 'Own this business?' in Maps, from an account the business controls."
+    },
+    {
+      "id": "L5",
+      "title": "Not permanently closed",
+      "layer": "local",
+      "group": "profile_basics",
+      "severity": "high",
+      "rubric": "A profile marked permanently closed drops out of local results.",
+      "fix": "If the business still trades here, reopen the profile; if it moved, update the address instead of closing."
+    },
+    {
+      "id": "L6",
+      "title": "Address or service area shown",
+      "layer": "local",
+      "group": "profile_basics",
+      "severity": "medium",
+      "rubric": "Google needs an address or a service area to know where the business competes.",
+      "fix": "Add the street address for a storefront, or the service areas for a business that visits customers."
+    },
+    {
+      "id": "L7",
+      "title": "Primary category set",
+      "layer": "local",
+      "group": "categories",
+      "severity": "high",
+      "rubric": "The primary category is the strongest relevance signal a profile has; without one the profile ranks for little.",
+      "fix": "Pick the most specific primary category that describes the core business, as the top competitors do."
+    },
+    {
+      "id": "L8",
+      "title": "Secondary categories used",
+      "layer": "local",
+      "group": "categories",
+      "severity": "medium",
+      "rubric": "Secondary categories let the profile rank for the other services it sells; Google allows up to nine.",
+      "fix": "Add the secondary categories that match services actually offered; never add ones that do not apply.",
+      "thresholds": { "min": 2, "max": 9 }
+    },
+    {
+      "id": "L9",
+      "title": "Primary category fits the target search",
+      "layer": "local",
+      "group": "categories",
+      "severity": "high",
+      "rubric": "When the primary category does not share words with the search the business wants, it rarely ranks for it.",
+      "fix": "Choose a primary category that matches the main search; move the current one to a secondary slot if it still applies."
+    },
+    {
+      "id": "L10",
+      "title": "Uses the categories top competitors share",
+      "layer": "local",
+      "group": "categories",
+      "severity": "medium",
+      "rubric": "A category most of the top competitors use and this profile lacks is a likely relevance gap.",
+      "fix": "Review the categories competitors share and add those that describe this business truthfully.",
+      "thresholds": { "share": 0.5 }
+    },
+    {
+      "id": "L11",
+      "title": "Description written",
+      "layer": "local",
+      "group": "content",
+      "severity": "medium",
+      "rubric": "The description is the one place the owner explains the business in their own words.",
+      "fix": "Write a description of what the business does, for whom and where, with no links or promotions."
+    },
+    {
+      "id": "L12",
+      "title": "Description length",
+      "layer": "local",
+      "group": "content",
+      "severity": "low",
+      "rubric": "Google allows 750 characters; under about 250 says too little to show relevance.",
+      "fix": "Expand the description to between 250 and 750 characters, leading with the core services.",
+      "thresholds": { "min": 250, "max": 750 }
+    },
+    {
+      "id": "L13",
+      "title": "Description names the service and the place",
+      "layer": "local",
+      "group": "content",
+      "severity": "low",
+      "rubric": "A description that names the main service and the city confirms relevance for local searches.",
+      "fix": "Mention the main service and the city or area served in the first sentence of the description."
+    },
+    {
+      "id": "L14",
+      "title": "Attributes filled",
+      "layer": "local",
+      "group": "content",
+      "severity": "low",
+      "rubric": "Attributes (accessibility, payments, amenities) feed filters and answers; few means missed matches.",
+      "fix": "Fill every attribute that applies in the profile's 'More' section.",
+      "thresholds": { "min": 3 }
+    },
+    {
+      "id": "L15",
+      "title": "Services listed",
+      "layer": "local",
+      "group": "content",
+      "severity": "medium",
+      "rubric": "Listed services help the profile match service searches and appear in the profile's services tab.",
+      "fix": "List each service sold, with a short description, using the words customers search with.",
+      "thresholds": { "min": 3 }
+    },
+    {
+      "id": "L16",
+      "title": "Products listed",
+      "layer": "local",
+      "group": "content",
+      "severity": "low",
+      "rubric": "Products show as a carousel on the profile; they are optional for service-only businesses.",
+      "fix": "Add the main products or service packages with a photo, a name and a price range."
+    },
+    {
+      "id": "L17",
+      "title": "Enough photos",
+      "layer": "local",
+      "group": "photos",
+      "severity": "medium",
+      "rubric": "Profiles with few photos look abandoned and get fewer clicks and direction requests.",
+      "fix": "Add real photos of the exterior, interior, team and work; keep adding a few each month.",
+      "thresholds": { "min": 10, "good": 25 }
+    },
+    {
+      "id": "L18",
+      "title": "Customers add photos to reviews",
+      "layer": "local",
+      "group": "photos",
+      "severity": "low",
+      "rubric": "Reviews with photos are more trusted; almost none suggests customers are not asked for them.",
+      "fix": "When asking for reviews, invite customers to add a photo of the result.",
+      "thresholds": { "share": 0.1 }
+    },
+    {
+      "id": "L19",
+      "title": "Rating",
+      "layer": "local",
+      "group": "reviews",
+      "severity": "high",
+      "rubric": "Searchers filter and choose by stars; under 4.0 loses clicks to better-rated neighbours.",
+      "fix": "Fix the causes the negative reviews name, then ask every satisfied customer for a review.",
+      "thresholds": { "good": 4.3, "min": 4.0 }
+    },
+    {
+      "id": "L20",
+      "title": "Enough reviews",
+      "layer": "local",
+      "group": "reviews",
+      "severity": "medium",
+      "rubric": "A handful of reviews is weak proof for searchers and a weak prominence signal for Google.",
+      "fix": "Ask for a review after each completed job, with a direct review link.",
+      "thresholds": { "min": 10, "good": 50 }
+    },
+    {
+      "id": "L21",
+      "title": "Review count against competitors",
+      "layer": "local",
+      "group": "reviews",
+      "severity": "medium",
+      "rubric": "Far fewer reviews than the competitors' median is one of the clearest prominence gaps in local results.",
+      "fix": "Set a monthly review target that closes the gap to the competitors' median within a year.",
+      "thresholds": { "min_ratio": 0.5, "good_ratio": 1.0 }
+    },
+    {
+      "id": "L22",
+      "title": "Recent reviews",
+      "layer": "local",
+      "group": "reviews",
+      "severity": "medium",
+      "rubric": "Review velocity matters: no new reviews in three months reads as a business in decline.",
+      "fix": "Make asking for a review part of every job, so new reviews arrive every month.",
+      "thresholds": { "min_90d": 1, "good_90d": 3 }
+    },
+    {
+      "id": "L23",
+      "title": "Owner replies to reviews",
+      "layer": "local",
+      "group": "reviews",
+      "severity": "medium",
+      "rubric": "Replying to reviews shows searchers the owner cares, and Google says it is a good practice.",
+      "fix": "Reply to every review, positive and negative, ideally within a few days.",
+      "thresholds": { "min": 0.4, "good": 0.8 }
+    },
+    {
+      "id": "L24",
+      "title": "Owner replies quickly",
+      "layer": "local",
+      "group": "reviews",
+      "severity": "low",
+      "rubric": "A reply weeks later helps little; a quick reply can turn an unhappy reviewer around.",
+      "fix": "Check new reviews weekly and reply within a few days.",
+      "thresholds": { "good_days": 7, "max_days": 30 }
+    },
+    {
+      "id": "L25",
+      "title": "No unanswered negative reviews",
+      "layer": "local",
+      "group": "reviews",
+      "severity": "high",
+      "rubric": "A recent one- or two-star review with no reply is the first thing a careful searcher reads.",
+      "fix": "Reply to each negative review calmly and specifically, and offer to resolve it offline.",
+      "thresholds": { "max_rating": 2, "window_days": 365 }
+    },
+    {
+      "id": "L26",
+      "title": "Posted recently",
+      "layer": "local",
+      "group": "posts",
+      "severity": "medium",
+      "rubric": "Posts older than a month show an inactive profile; regular posts keep offers and news in front of searchers.",
+      "fix": "Publish an update, offer or event post at least weekly.",
+      "thresholds": { "good_days": 30, "max_days": 90 }
+    },
+    {
+      "id": "L27",
+      "title": "Posting cadence",
+      "layer": "local",
+      "group": "posts",
+      "severity": "low",
+      "rubric": "A steady rhythm of posts beats bursts followed by silence.",
+      "fix": "Plan a month of posts ahead and publish on a fixed day each week.",
+      "thresholds": { "min_90d": 3, "good_90d": 12 }
+    },
+    {
+      "id": "L28",
+      "title": "Posts link somewhere",
+      "layer": "local",
+      "group": "posts",
+      "severity": "low",
+      "rubric": "A post without a call-to-action button gives the reader nothing to do next.",
+      "fix": "Add a button (Book, Order, Learn more, Call) that links to the matching page.",
+      "thresholds": { "share": 0.5 }
+    },
+    {
+      "id": "L29",
+      "title": "Posts carry a photo or video",
+      "layer": "local",
+      "group": "posts",
+      "severity": "low",
+      "rubric": "Text-only posts are easy to scroll past.",
+      "fix": "Attach a real photo or short video to every post.",
+      "thresholds": { "share": 0.8 }
+    },
+    {
+      "id": "L30",
+      "title": "Website matches name, address and phone",
+      "layer": "local",
+      "group": "website",
+      "severity": "high",
+      "rubric": "A website that shows a different name, address or phone weakens Google's trust in the profile's details.",
+      "fix": "Show the exact profile name, address and phone on the linked page, in text and in schema."
+    },
+    {
+      "id": "L31",
+      "title": "LocalBusiness schema present",
+      "layer": "local",
+      "group": "website",
+      "severity": "medium",
+      "rubric": "LocalBusiness structured data states the business's details in a form search engines and agents read reliably.",
+      "fix": "Add LocalBusiness JSON-LD (or the most specific subtype) to the linked page."
+    },
+    {
+      "id": "L32",
+      "title": "LocalBusiness schema complete",
+      "layer": "local",
+      "group": "website",
+      "severity": "low",
+      "rubric": "Schema without address, telephone, geo or opening hours leaves out the facts local search needs.",
+      "fix": "Add name, address, telephone, geo and openingHoursSpecification to the LocalBusiness schema."
+    },
+    {
+      "id": "L33",
+      "title": "Click-to-call link",
+      "layer": "local",
+      "group": "website",
+      "severity": "low",
+      "rubric": "Mobile visitors expect to tap the number; a number that is only text costs calls.",
+      "fix": "Wrap the phone number in a tel: link."
+    },
+    {
+      "id": "L34",
+      "title": "Website hours match the profile",
+      "layer": "local",
+      "group": "website",
+      "severity": "medium",
+      "rubric": "Different hours on the website and the profile confuse customers and Google.",
+      "fix": "Make the hours on the website and its schema the same as the profile's."
+    },
+    {
+      "id": "L35",
+      "title": "Embedded map",
+      "layer": "local",
+      "group": "website",
+      "severity": "low",
+      "rubric": "An embedded Google map on the location page helps visitors find the business and ties the page to the place.",
+      "fix": "Embed the Google map of this business on the contact or location page."
+    },
+    {
+      "id": "L36",
+      "title": "Name free of keyword stuffing",
+      "layer": "local",
+      "group": "trust",
+      "severity": "high",
+      "rubric": "Adding cities or services to the business name breaks Google's guidelines and risks suspension; competitors can report it.",
+      "fix": "Use the real-world business name as on signage and documents; put services and places in categories and the description."
+    },
+    {
+      "id": "L37",
+      "title": "Service-area business hides its street address",
+      "layer": "local",
+      "group": "trust",
+      "severity": "medium",
+      "rubric": "A business that serves customers at their location but shows a street address where it does not receive them risks suspension.",
+      "fix": "If customers are not served at the address, hide it and keep only the service areas."
+    },
+    {
+      "id": "L38",
+      "title": "Not temporarily closed",
+      "layer": "local",
+      "group": "trust",
+      "severity": "high",
+      "rubric": "A profile marked temporarily closed ranks lower and tells searchers to go elsewhere.",
+      "fix": "Remove the temporary closure as soon as the business reopens."
+    },
+    {
+      "id": "L39",
+      "title": "No duplicate-looking profiles at the same address",
+      "layer": "local",
+      "group": "trust",
+      "severity": "medium",
+      "rubric": "Two profiles with similar names at one address look like duplicates; Google may merge or suspend them.",
+      "fix": "Check each same-address profile; request removal of true duplicates through Google support."
+    }
+  ]
+}

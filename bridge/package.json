@@ -1,0 +1,35 @@
+{
+  "name": "@workpods/local-seo",
+  "author": "Shefali Munjal",
+  "version": "1.0.0",
+  "description": "Local MCP server and CLI for the Local SEO extension: Google Business Profile and Maps audits.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "local-seo": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "esbuild src/cli.ts --bundle --platform=node --format=esm --target=node22 --outfile=dist/cli.js --banner:js=\"#!/usr/bin/env node\" --external:@modelcontextprotocol/sdk --external:linkedom --external:ws --external:zod",
+    "typecheck": "tsc -p .",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "linkedom": "0.18.15",
+    "ws": "8.18.3",
+    "zod": "4.1.12"
+  },
+  "devDependencies": {
+    "@local-seo/core": "*",
+    "@open-agent-ready/core": "*",
+    "@types/node": "22.19.1",
+    "@types/ws": "8.18.1",
+    "esbuild": "0.25.12"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

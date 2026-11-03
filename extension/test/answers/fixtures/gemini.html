@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Gemini</title>
+  </head>
+  <body>
+    <chat-app>
+      <div class="conversation-container">
+        <user-query
+          ><div class="query-text">
+            <p class="query-text-line">Which running shoe brands are best for marathons?</p>
+          </div></user-query
+        >
+        <model-response>
+          <response-container>
+            <message-content class="model-response-text">
+              <div class="markdown markdown-main-panel">
+                <p>Marathon runners often choose cushioned, light shoes.</p>
+                <ul>
+                  <li><b>Pacer Shoes</b> makes the Long Run, a popular race-day pick.</li>
+                  <li><b>Acme Running</b> is known for its Tempo line.</li>
+                </ul>
+                <p>
+                  See
+                  <a
+                    href="https://www.google.com/url?q=https://runnersguide.example/marathon-shoes&amp;sa=D"
+                    >this guide</a
+                  >.
+                </p>
+              </div>
+            </message-content>
+            <sources-list>
+              <a href="https://pacershoes.example/long-run">Pacer Shoes: Long Run</a>
+              <a href="https://support.google.com/gemini/answer/1">How Gemini uses sources</a>
+            </sources-list>
+          </response-container>
+        </model-response>
+      </div>
+      <input-area-v2>
+        <rich-textarea
+          ><div
+            class="ql-editor"
+            contenteditable="true"
+            role="textbox"
+            aria-label="Enter a prompt here"
+          >
+            <p></p></div
+        ></rich-textarea>
+        <button aria-label="Send message">Send</button>
+      </input-area-v2>
+    </chat-app>
+  </body>
+</html>

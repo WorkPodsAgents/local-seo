@@ -1,0 +1,8 @@
+{
+  "name": "local-seo",
+  "version": "1.0.0",
+  "description": "Google Business Profile and Google Maps audits, run by your coding agent through the Local SEO extension and local MCP bridge. No account; paid data uses your own keys.",
+  "author": { "name": "Shefali Munjal" },
+  "license": "Apache-2.0",
+  "keywords": ["local-seo", "google-business-profile", "google-maps", "gbp", "mcp", "agents"]
+}

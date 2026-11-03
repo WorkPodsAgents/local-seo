@@ -1,0 +1,33 @@
+{
+  "_source": "docs example https://docs.dataforseo.com/v3/business_data/google/reviews/task_post/",
+  "version": "0.1.20200325",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.1329 sec.",
+  "cost": 0.00375,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "04011309-0696-0199-0000-dc2348782221",
+      "status_code": 20100,
+      "status_message": "Task Created.",
+      "time": "0.0041 sec.",
+      "cost": 0.00375,
+      "result_count": 0,
+      "path": ["v3", "business_data", "google", "reviews", "task_post"],
+      "data": {
+        "api": "reviews",
+        "function": "task_post",
+        "se": "google",
+        "location_name": "London,England,United Kingdom",
+        "language_name": "English",
+        "keyword": "hedonism wines",
+        "depth": 50,
+        "device": "desktop",
+        "os": "windows"
+      },
+      "result": null
+    }
+  ]
+}

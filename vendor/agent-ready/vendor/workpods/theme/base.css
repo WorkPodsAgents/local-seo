@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  min-height: 100%;
+  background: var(--canvas);
+}
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: 1.43;
+  color: var(--ink-1);
+  background: var(--canvas);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+b,
+strong {
+  font-weight: var(--fw-strong);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-strong);
+  color: var(--ink-1);
+}
+code,
+pre {
+  font-family: var(--font-mono);
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.52;
+}
+input,
+select,
+textarea {
+  color: var(--ink-1);
+}
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* A field label: sentence case, never mono or uppercase. */
+.ui-label {
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  color: var(--ink-2);
+}
+
+/* Numeric rhythm: every KPI value and numeric table cell, or the digits
+   reflow on every update. */
+.wp-num {
+  font-variant-numeric: tabular-nums;
+}

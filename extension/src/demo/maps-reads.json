@@ -1,0 +1,559 @@
+{
+  "placeUrl": "https://www.google.com/maps/place/Lamar+Street+Dental/@30.2372985,-97.7902045,15z/data=!4m6!3m5!1s0xa8cf2b76a414dc40:0x165e7c7a386b6163!8m2!3d30.2372985!4d-97.7902045!16s%2Fg%2F11o6gs_7?hl=en",
+  "place": {
+    "source": "maps_page",
+    "readAt": "2026-11-03T00:00:00.000Z",
+    "ids": {
+      "placeId": "ChIJP1FZz7YX04pZHLNJAC6tI3P",
+      "cid": "1611862581019631971",
+      "kgId": "/g/11o6gs_7",
+      "featureId": "0xa8cf2b76a414dc40:0x165e7c7a386b6163"
+    },
+    "name": "Lamar Street Dental",
+    "categories": {
+      "primary": "Dentist",
+      "secondary": {
+        "missing": true,
+        "reason": "Maps shows only the primary category on the page"
+      }
+    },
+    "address": {
+      "formatted": "1450 Cedar Hollow Dr Ste 210, Austin, TX 78704",
+      "street": null,
+      "city": null,
+      "region": null,
+      "postalCode": null,
+      "country": null
+    },
+    "serviceAreas": {
+      "missing": true,
+      "reason": "Maps does not show this on the place panel"
+    },
+    "location": {
+      "lat": 30.2372985,
+      "lng": -97.7902045
+    },
+    "phone": "(512) 555-0142",
+    "website": "http://lamarstreetdental.example/?utm_source=gbp&utm_medium=organic&utm_campaign=listing",
+    "hours": {
+      "intervals": [
+        {
+          "day": "mon",
+          "opens": "08:00",
+          "closes": "16:00"
+        },
+        {
+          "day": "tue",
+          "opens": "08:00",
+          "closes": "16:00"
+        },
+        {
+          "day": "wed",
+          "opens": "08:00",
+          "closes": "16:00"
+        },
+        {
+          "day": "thu",
+          "opens": "08:00",
+          "closes": "16:00"
+        }
+      ],
+      "open24h": []
+    },
+    "attributes": {
+      "missing": true,
+      "reason": "the About tab of the place is not open"
+    },
+    "services": {
+      "missing": true,
+      "reason": "Maps does not show this on the place panel"
+    },
+    "products": {
+      "missing": true,
+      "reason": "Maps does not show this on the place panel"
+    },
+    "description": {
+      "missing": true,
+      "reason": "Maps leaves the owner's description out of its limited view; sign in to Google to see it"
+    },
+    "rating": 5,
+    "reviewCount": 181,
+    "photoCount": 7,
+    "claimed": {
+      "missing": true,
+      "reason": "Maps leaves the claim prompt out of its limited view, so claim status cannot be told"
+    },
+    "closure": null
+  },
+  "attributes": [
+    {
+      "group": "Accessibility",
+      "values": [
+        "Offers assisted listening devices",
+        "Has assistive hearing loop",
+        "Has wheelchair accessible entrance",
+        "Has wheelchair accessible parking lot",
+        "Has wheelchair accessible restroom",
+        "Has wheelchair accessible seating"
+      ]
+    }
+  ],
+  "results": {
+    "surface": "maps",
+    "query": "dentist austin tx",
+    "from": {
+      "lat": 30.2964901,
+      "lng": -97.7585524
+    },
+    "readAt": "2026-11-03T00:00:00.000Z",
+    "results": [
+      {
+        "position": 1,
+        "sponsored": false,
+        "name": "Lamar Street Dental",
+        "ids": {
+          "placeId": "ChIJP1FZz7YX04pZHLNJAC6tI3P",
+          "cid": "1611862581019631971",
+          "kgId": "/g/11o6gs_7",
+          "featureId": "0xa8cf2b76a414dc40:0x165e7c7a386b6163"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 5,
+        "reviewCount": 181,
+        "address": "1450 Cedar Hollow Dr Ste 210",
+        "location": {
+          "lat": 30.2372985,
+          "lng": -97.7902045
+        }
+      },
+      {
+        "position": 2,
+        "sponsored": false,
+        "name": "Cedar Hollow Family Dental",
+        "ids": {
+          "placeId": "ChIJkUipP9C-Usr3RzLd41ihAim",
+          "cid": "5024366882418004594",
+          "kgId": "/g/11fkqjq3",
+          "featureId": "0x9fd41bb8ca322466:0x45ba230f2fc31272"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 4.9,
+        "reviewCount": 915,
+        "address": "2210 Pecan Row",
+        "location": {
+          "lat": 30.2482229,
+          "lng": -97.7559705
+        }
+      },
+      {
+        "position": 3,
+        "sponsored": false,
+        "name": "Bluebonnet Emergency Dentistry",
+        "ids": {
+          "placeId": "ChIJILNRcXWqXU4wFvqQl1k83s3",
+          "cid": "5634636964290770891",
+          "kgId": "/g/119523c6",
+          "featureId": "0xff52958ce320c175:0x4e32407726d637cb"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 4.8,
+        "reviewCount": 1584,
+        "address": "880 Meadowlark Pkwy #214",
+        "location": {
+          "lat": 30.3406789,
+          "lng": -97.6924276
+        }
+      },
+      {
+        "position": 4,
+        "sponsored": false,
+        "name": "Pecan Grove Dental, PC",
+        "ids": {
+          "placeId": "ChIJIJC8ZnrwPwwcDKWAos5tixa",
+          "cid": "3419597176758892777",
+          "kgId": "/g/11v5g16t",
+          "featureId": "0xe6844bdbf9c1196a:0x2f74d983b3a478e9"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 4.9,
+        "reviewCount": 171,
+        "address": "3412 Larkspur Dr #2",
+        "location": {
+          "lat": 30.3243224,
+          "lng": -97.7424001
+        }
+      },
+      {
+        "position": 5,
+        "sponsored": false,
+        "name": "Riverbend Smiles",
+        "ids": {
+          "placeId": "ChIJjvnmNkTqdZM7XH4sGu7rp_3",
+          "cid": "2914945445747098262",
+          "kgId": "/g/11cea9sk",
+          "featureId": "0xe76e46e2b05caa72:0x2873f77059660296"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 5,
+        "reviewCount": 734,
+        "address": "1630 Willow Creek Rd Ste 18",
+        "location": {
+          "lat": 30.3082289,
+          "lng": -97.7487691
+        }
+      },
+      {
+        "position": 6,
+        "sponsored": false,
+        "name": "Limestone Dental Care",
+        "ids": {
+          "placeId": "ChIJpv5Stk_4bzz03N2JkY3P2QW",
+          "cid": "2461955480467848632",
+          "kgId": "/g/11c0viax",
+          "featureId": "0xa5287c2cd1bd1eff:0x222a9f772a1cbdb8"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 4.9,
+        "reviewCount": 534,
+        "address": "5120 Granite Ridge Blvd Ste. B4",
+        "location": {
+          "lat": 30.2945632,
+          "lng": -97.7180328
+        }
+      },
+      {
+        "position": 7,
+        "sponsored": false,
+        "name": "Juniper Park Dentistry",
+        "ids": {
+          "placeId": "ChIJiy0YqnZerqeGbvLeA4c4sNQ",
+          "cid": "7143077755703361473",
+          "kgId": "/g/11d3y0aj",
+          "featureId": "0xc2e82f32a30c71b0:0x63214f5f87b17fc1"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 4.9,
+        "reviewCount": 636,
+        "address": "4380 Juniper Park Ave #410",
+        "location": {
+          "lat": 30.3150192,
+          "lng": -97.7355807
+        }
+      },
+      {
+        "position": 8,
+        "sponsored": false,
+        "name": "Oak Terrace Dental",
+        "ids": {
+          "placeId": "ChIJYPFxLzKe_6BSEnnYat3WY-E",
+          "cid": "5887309716248525413",
+          "kgId": "/g/11fo4j2k",
+          "featureId": "0xa683e4c0ea9546c4:0x51b3ecfe9fb2fa65"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 4.9,
+        "reviewCount": 741,
+        "address": "7020 Northfield Blvd #212",
+        "location": {
+          "lat": 30.3517638,
+          "lng": -97.7526933
+        }
+      },
+      {
+        "position": 9,
+        "sponsored": false,
+        "name": "Sunfield Cosmetic Dentistry",
+        "ids": {
+          "placeId": "ChIJja11UdYw3co3q6mIqCDlbdK",
+          "cid": "6692415984674764533",
+          "kgId": "/g/117p261x",
+          "featureId": "0x958379ce373027a4:0x5ce03ce14faf76f5"
+        },
+        "primaryCategory": "Cosmetic dentist",
+        "rating": 5,
+        "reviewCount": 684,
+        "address": "1630 Willow Creek Rd #31",
+        "location": {
+          "lat": 30.3082991,
+          "lng": -97.7488276
+        }
+      },
+      {
+        "position": 10,
+        "sponsored": false,
+        "name": "Willow Bend Family Dentist",
+        "ids": {
+          "placeId": "ChIJ1TrexNCzk4UtkbndLXOAXpV",
+          "cid": "5129992464725208798",
+          "kgId": "/g/11n6ou87",
+          "featureId": "0xa0dc468f7fbe750a:0x473164f780606ede"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 4.9,
+        "reviewCount": 396,
+        "address": "3315 Copper Hill Dr #204",
+        "location": {
+          "lat": 30.3531047,
+          "lng": -97.7519975
+        }
+      },
+      {
+        "position": 11,
+        "sponsored": false,
+        "name": "Copperleaf Dental",
+        "ids": {
+          "placeId": "ChIJAMCr3RXKy6UWR5HOz59agKC",
+          "cid": "5366337405615751634",
+          "kgId": "/g/11zj6147",
+          "featureId": "0xe09ae129b266955c:0x4a790f70369e41d2"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 3.5,
+        "reviewCount": 336,
+        "address": "2045 Sandstone Ln Ste 120",
+        "location": {
+          "lat": 30.1752901,
+          "lng": -97.8237255
+        }
+      },
+      {
+        "position": 12,
+        "sponsored": false,
+        "name": "Ridgeline Lifetime Dental",
+        "ids": {
+          "placeId": "ChIJc0p83avZvfT0wRZ4EDlkiS9",
+          "cid": "8336875442379227639",
+          "kgId": "/g/11ln4hd2",
+          "featureId": "0xbab37f6788b77fe5:0x73b2880b4fb101f7"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 4.9,
+        "reviewCount": 846,
+        "address": "2290 Ridgeline Dr",
+        "location": {
+          "lat": 30.4176901,
+          "lng": -97.6988203
+        }
+      },
+      {
+        "position": 13,
+        "sponsored": false,
+        "name": "Tidewater Dental",
+        "ids": {
+          "placeId": "ChIJx8igBQY3y3iD7Jf2XAyRP03",
+          "cid": "8292632881387703843",
+          "kgId": "/g/11zzffxz",
+          "featureId": "0x97dd6fd7a49d14c2:0x731559ab5bd68e23"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 4.8,
+        "reviewCount": 1001,
+        "address": "1780 Mockingbird Ln",
+        "location": {
+          "lat": 30.2512668,
+          "lng": -97.764823
+        }
+      },
+      {
+        "position": 14,
+        "sponsored": false,
+        "name": "Fairhaven Emergency Dental",
+        "ids": {
+          "placeId": "ChIJOu-C6k7TX-8G3QM3FVbu-e7",
+          "cid": "1044943528158956708",
+          "kgId": "/g/11h5otes",
+          "featureId": "0xdeab133144adda90:0xe80629a3e420ca4"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 4.9,
+        "reviewCount": 888,
+        "address": "2640 Fairhaven Dr Ste 105 (Building #2",
+        "location": {
+          "lat": 30.2070158,
+          "lng": -97.8135511
+        }
+      },
+      {
+        "position": 15,
+        "sponsored": false,
+        "name": "Northgate Dental",
+        "ids": {
+          "placeId": "ChIJ0nNuuhyTIWGrmBkR-Zo8M8F",
+          "cid": "1891245638498312220",
+          "kgId": "/g/11bs472w",
+          "featureId": "0x8b8a3d2190fd0a0b:0x1a3f0de351b2e01c"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 5,
+        "reviewCount": 1189,
+        "address": "11800 Northgate Pkwy Ste A120",
+        "location": {
+          "lat": 30.4043561,
+          "lng": -97.6759803
+        }
+      },
+      {
+        "position": 16,
+        "sponsored": false,
+        "name": "The Corner Dentist",
+        "ids": {
+          "placeId": "ChIJwJN4lOUdSJ_CctOS6ys3Cyw",
+          "cid": "5833291912988967149",
+          "kgId": "/g/11ky13es",
+          "featureId": "0xc898c96b4ccc2a79:0x50f40416b8ddc0ed"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 4.9,
+        "reviewCount": 155,
+        "address": "1905 Elm Hollow St",
+        "location": {
+          "lat": 30.2561662,
+          "lng": -97.7225366
+        }
+      },
+      {
+        "position": 17,
+        "sponsored": false,
+        "name": "Brightwater Dentistry and Orthodontics",
+        "ids": {
+          "placeId": "ChIJft4qXKfUtlIRa7sn2ivg5pm",
+          "cid": "8413175173918324568",
+          "kgId": "/g/11c5g0c0",
+          "featureId": "0x849cbf252459f597:0x74c19a3eea897758"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 4.5,
+        "reviewCount": 464,
+        "address": "3720 Brightwater Dr Bldg 3 Ste 400",
+        "location": {
+          "lat": 30.215376,
+          "lng": -97.833512
+        }
+      },
+      {
+        "position": 18,
+        "sponsored": false,
+        "name": "Wildflower Dental",
+        "ids": {
+          "placeId": "ChIJR2Ak_pVfN2A4ZCZvGT3gwAS",
+          "cid": "5895267267139979594",
+          "kgId": "/g/11xq89g7",
+          "featureId": "0xff67182c8f72a7a1:0x51d0325851ddc94a"
+        },
+        "primaryCategory": "Cosmetic dentist",
+        "rating": 4.9,
+        "reviewCount": 467,
+        "address": "2950 Prairie Rose Ln",
+        "location": {
+          "lat": 30.2415391,
+          "lng": -97.784855
+        }
+      },
+      {
+        "position": 19,
+        "sponsored": false,
+        "name": "The Dental Commons",
+        "ids": {
+          "placeId": "ChIJmcZctYKV0e5AWb_whktL79U",
+          "cid": "4538936407969552354",
+          "kgId": "/g/11w310iu",
+          "featureId": "0xed446a77e1bf5cae:0x3efd8a9d5f1cd7e2"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 4.8,
+        "reviewCount": 294,
+        "address": "4410 Saddle Creek Dr Ste C-220",
+        "location": {
+          "lat": 30.2215292,
+          "lng": -97.8411246
+        }
+      },
+      {
+        "position": 20,
+        "sponsored": false,
+        "name": "Kestrel Dental",
+        "ids": {
+          "placeId": "ChIJ9CfTOtAOq0KGIdqXFySuIEi",
+          "cid": "7872074105063808155",
+          "kgId": "/g/11ixfx1r",
+          "featureId": "0xb466fac508c6be2a:0x6d3f39b0c5e11c9b"
+        },
+        "primaryCategory": "Dentist",
+        "rating": 5,
+        "reviewCount": 332,
+        "address": "6720 Kestrel Way B",
+        "location": {
+          "lat": 30.2067983,
+          "lng": -97.8153524
+        }
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvwm0hREE4hmXBk7CKqQMIo3OhURDGbOO0xtttXtb3",
+      "rating": 5,
+      "text": "Love this office and everyone in it. They asked what name I go by and used it the whole visit, the billing was simple and the cleaning was thorough. I've been coming here for …",
+      "publishedAt": null,
+      "relativeAge": "3 months ago",
+      "ownerReply": {
+        "text": "Your feedback helps us continue to improve – thank you!",
+        "publishedAt": null
+      },
+      "authorReviewCount": 24,
+      "photoCount": 0
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvs8OwzUVlZERUuFPMaTDzOxMaemw8wrQ4ZWq5XNZB",
+      "rating": 5,
+      "text": "I can't say enough good things about this practice! Everyone is warm, welcoming and professional. From the minute you check in, you feel looked after. The whole team is patient, careful and kind, while still keeping …",
+      "publishedAt": null,
+      "relativeAge": "a month ago",
+      "ownerReply": {
+        "text": "We’re grateful for the opportunity to serve our community – thank you!",
+        "publishedAt": null
+      },
+      "authorReviewCount": 3,
+      "photoCount": 0
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvuJ4eyurUbjwU9hptLsHpztIghePI7js13TjWMZ9c",
+      "rating": 5,
+      "text": "I first saw Dr. Hollis years ago and she is still the best dentist I know in Austin. My latest visit was as good as every one before it. No reason to dread a dental appointment when Lamar Street Dental is where you are going.",
+      "publishedAt": null,
+      "relativeAge": "5 months ago",
+      "ownerReply": {
+        "text": "Thank you for your review! We hope you have a great day!",
+        "publishedAt": null
+      },
+      "authorReviewCount": 19,
+      "photoCount": 0
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvYTzgo9E1A0sTKOvxiawPq1CdTdsXBGuuYpRqbcPH",
+      "rating": 5,
+      "text": "Wonderful team! Dental visits make me nervous, and both times I have been they have kept me calm from the moment I arrive to the moment I leave. They are clear about cost and walk you through any treatment you might need.",
+      "publishedAt": null,
+      "relativeAge": "5 months ago",
+      "ownerReply": {
+        "text": "Thank you very much. High-quality patient care is incredibly important to us, so this review means a lot to our team.",
+        "publishedAt": null
+      },
+      "authorReviewCount": 5,
+      "photoCount": 0
+    },
+    {
+      "id": "Ci9DQUlRQUNvZENodHljRjlvjCS41Yt5C0gSFOtGqyy2nli6OvCSKooug5w5qvJI",
+      "rating": 5,
+      "text": "Best hygienist I've seen in years! Careful, gentle and happy to explain. It was my first visit and the office is calm, comfortable and professional. Glad to have found a new dentist!",
+      "publishedAt": null,
+      "relativeAge": "3 months ago",
+      "ownerReply": {
+        "text": "Thank you for reviewing our office!",
+        "publishedAt": null
+      },
+      "authorReviewCount": 4,
+      "photoCount": 0
+    }
+  ]
+}

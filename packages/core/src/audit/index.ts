@@ -1,0 +1,5 @@
+export { auditProfile } from './audit'
+export type { ProfileAudit } from './audit'
+export type { AuditExtras, LocalFinding } from './finding'
+export { scoreOf } from './score'
+export type { ProfileScore } from './score'

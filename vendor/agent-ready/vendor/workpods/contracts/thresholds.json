@@ -1,0 +1,144 @@
+{
+    "thresholds": [
+        {
+            "id": "striking_distance.position_min",
+            "governs": "search_opportunities:striking_distance",
+            "input_field": "thresholds.striking_distance.position_min",
+            "default": 4.0,
+            "unit": "position"
+        },
+        {
+            "id": "striking_distance.position_max",
+            "governs": "search_opportunities:striking_distance",
+            "input_field": "thresholds.striking_distance.position_max",
+            "default": 20.0,
+            "unit": "position"
+        },
+        {
+            "id": "striking_distance.min_impressions",
+            "governs": "search_opportunities:striking_distance",
+            "input_field": "thresholds.striking_distance.min_impressions",
+            "default": 50,
+            "unit": "impressions"
+        },
+        {
+            "id": "low_ctr.position_max",
+            "governs": "search_opportunities:ctr_gap",
+            "input_field": "thresholds.low_ctr.position_max",
+            "default": 10.0,
+            "unit": "position"
+        },
+        {
+            "id": "low_ctr.max_ctr_ratio",
+            "governs": "search_opportunities:ctr_gap",
+            "input_field": "thresholds.low_ctr.max_ctr_ratio",
+            "default": 0.5,
+            "unit": "ratio"
+        },
+        {
+            "id": "low_ctr.min_impressions",
+            "governs": "search_opportunities:ctr_gap",
+            "input_field": "thresholds.low_ctr.min_impressions",
+            "default": 100,
+            "unit": "impressions"
+        },
+        {
+            "id": "decay.min_declining_months",
+            "governs": "search_opportunities:decaying_pages",
+            "input_field": "thresholds.decay.min_declining_months",
+            "default": 2,
+            "unit": "months"
+        },
+        {
+            "id": "decay.min_lost_clicks",
+            "governs": "search_opportunities:decaying_pages",
+            "input_field": "thresholds.decay.min_lost_clicks",
+            "default": 20,
+            "unit": "clicks"
+        },
+        {
+            "id": "decay.min_positions_lost",
+            "governs": "search_opportunities:decaying_pages",
+            "input_field": "thresholds.decay.min_positions_lost",
+            "default": 1.0,
+            "unit": "position"
+        },
+        {
+            "id": "cannibalization.min_impressions",
+            "governs": "search_cannibalization",
+            "input_field": "thresholds.cannibalization.min_impressions",
+            "default": 100,
+            "unit": "impressions"
+        },
+        {
+            "id": "cannibalization.min_page_share",
+            "governs": "search_cannibalization",
+            "input_field": "thresholds.cannibalization.min_page_share",
+            "default": 0.1,
+            "unit": "share"
+        },
+        {
+            "id": "cannibalization.co_listed_min_share",
+            "governs": "search_cannibalization",
+            "input_field": "thresholds.cannibalization.co_listed_min_share",
+            "default": 0.25,
+            "unit": "share"
+        },
+        {
+            "id": "cannibalization.co_listed_position_after",
+            "governs": "search_cannibalization",
+            "input_field": "thresholds.cannibalization.co_listed_position_after",
+            "default": 5.0,
+            "unit": "position"
+        },
+        {
+            "id": "core_web_vitals.lcp.good",
+            "governs": "speed_summary",
+            "input_field": null,
+            "default": 2500.0,
+            "unit": "ms"
+        },
+        {
+            "id": "core_web_vitals.lcp.poor",
+            "governs": "speed_summary",
+            "input_field": null,
+            "default": 4000.0,
+            "unit": "ms"
+        },
+        {
+            "id": "core_web_vitals.inp.good",
+            "governs": "speed_summary",
+            "input_field": null,
+            "default": 200.0,
+            "unit": "ms"
+        },
+        {
+            "id": "core_web_vitals.inp.poor",
+            "governs": "speed_summary",
+            "input_field": null,
+            "default": 500.0,
+            "unit": "ms"
+        },
+        {
+            "id": "core_web_vitals.cls.good",
+            "governs": "speed_summary",
+            "input_field": null,
+            "default": 0.1,
+            "unit": "score"
+        },
+        {
+            "id": "core_web_vitals.cls.poor",
+            "governs": "speed_summary",
+            "input_field": null,
+            "default": 0.25,
+            "unit": "score"
+        },
+        {
+            "id": "ai_readability.min_text_share",
+            "governs": "ai_content_requires_js",
+            "input_field": null,
+            "default": 0.2,
+            "unit": "share"
+        }
+    ]
+}

@@ -1,0 +1,364 @@
+{
+  "_source": "docs example https://docs.dataforseo.com/v3/serp/google/maps/live/advanced/",
+  "version": "0.1.20230705",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "4.0977 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "08021555-1535-0139-0000-462b80e927f7",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "4.0299 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": ["v3", "serp", "google", "maps", "live", "advanced"],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "maps",
+        "language_code": "en",
+        "location_code": 2840,
+        "keyword": "albert einstein",
+        "depth": 3,
+        "device": "desktop",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "albert einstein",
+          "type": "maps",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://google.com/maps/search/albert+einstein/@37.09024,-95.712891,4z?hl=en&gl=US&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2023-08-02 12:55:43 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": ["maps_search"],
+          "se_results_count": 0,
+          "items_count": 3,
+          "items": [
+            {
+              "type": "maps_search",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "domain": null,
+              "title": "Albert Einstein Statue",
+              "original_title": null,
+              "url": null,
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": null,
+              "rating_distribution": null,
+              "snippet": "6700 NW 35th St, Bethany, OK 73008",
+              "address": "6700 NW 35th St, Bethany, OK 73008",
+              "address_info": {
+                "borough": "Central Oklahoma City",
+                "address": "6700 NW 35th St",
+                "city": "Bethany",
+                "zip": "73008",
+                "region": "Oklahoma",
+                "country_code": "US"
+              },
+              "place_id": "ChIJSe0feYkFsocRajueupcvpas",
+              "phone": null,
+              "main_image": "https://lh5.googleusercontent.com/p/AF1QipOfM59_liNdL9hmEDbU0_K1uTSv4psbY7rY2bAj=w408-h541-k-no",
+              "total_photos": 12,
+              "category": "Tourist attraction",
+              "additional_categories": null,
+              "category_ids": ["tourist_attraction"],
+              "work_hours": {
+                "timetable": null,
+                "current_status": "close"
+              },
+              "feature_id": "0x87b20589791fed49:0xaba52f97ba9e3b6a",
+              "cid": "12368344280360434538",
+              "latitude": 35.5064351,
+              "longitude": -97.6317255,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false,
+              "price_level": null,
+              "hotel_rating": null
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "domain": "www.nasonline.org",
+              "title": "Albert Einstein Memorial",
+              "original_title": null,
+              "url": "http://www.nasonline.org/about-nas/visiting-nas/nas-building/the-einstein-memorial.html",
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.7,
+                "votes_count": 1283,
+                "rating_max": null
+              },
+              "rating_distribution": {
+                "1": 4,
+                "2": 8,
+                "3": 51,
+                "4": 194,
+                "5": 1026
+              },
+              "snippet": "2101 Constitution Ave. NW, Washington, DC 20418",
+              "address": "2101 Constitution Ave. NW, Washington, DC 20418",
+              "address_info": {
+                "borough": "Northwest Washington",
+                "address": "2101 Constitution Ave. NW",
+                "city": "Washington",
+                "zip": "20418",
+                "region": "District of Columbia",
+                "country_code": "US"
+              },
+              "place_id": "ChIJJZaaKqm3t4kRbBG17Vcv8Rg",
+              "phone": null,
+              "main_image": "https://lh5.googleusercontent.com/p/AF1QipPyOiGml7eII8LgiYGtPh4wzI7g8GP3fZ9Hzsy8=w408-h306-k-no",
+              "total_photos": 2501,
+              "category": "Sculpture",
+              "additional_categories": ["Monument"],
+              "category_ids": ["sculpture", "monument"],
+              "work_hours": {
+                "timetable": {
+                  "sunday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 0,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 0,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 0,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 0,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 0,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 0,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 0,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 0,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "open"
+              },
+              "feature_id": "0x89b7b7a92a9a9625:0x18f12f57edb5116c",
+              "cid": "1797269780994265452",
+              "latitude": 38.8924028,
+              "longitude": -77.0484139,
+              "is_claimed": false,
+              "local_justifications": null,
+              "is_directory_item": false,
+              "price_level": null,
+              "hotel_rating": null
+            },
+            {
+              "type": "maps_search",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "domain": "www.alberteinsteingroup.com",
+              "title": "The Albert Einstein Group, Inc.",
+              "original_title": null,
+              "url": "http://www.alberteinsteingroup.com/",
+              "contact_url": null,
+              "contributor_url": null,
+              "book_online_url": null,
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4,
+                "votes_count": 4,
+                "rating_max": null
+              },
+              "rating_distribution": {
+                "1": 1,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 3
+              },
+              "snippet": "8710 Converse Business Cir, Converse, TX 78109",
+              "address": "8710 Converse Business Cir, Converse, TX 78109",
+              "address_info": {
+                "borough": "Northeast Side",
+                "address": "8710 Converse Business Cir",
+                "city": "Converse",
+                "zip": "78109",
+                "region": "Texas",
+                "country_code": "US"
+              },
+              "place_id": "ChIJ5QKOJR6KXIYRm3-tvYC0RuE",
+              "phone": "+1833-463-3325",
+              "main_image": "https://lh5.googleusercontent.com/p/AF1QipMwYCFGMituQ_CohAgfNF6pQPNjt-b-FR96b7xc=w416-h240-k-no",
+              "total_photos": 18,
+              "category": "Business to business service",
+              "additional_categories": null,
+              "category_ids": ["business_to_business_service"],
+              "work_hours": {
+                "timetable": {
+                  "sunday": null,
+                  "monday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 17,
+                        "minute": 0
+                      }
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "open": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "close": {
+                        "hour": 12,
+                        "minute": 0
+                      }
+                    }
+                  ]
+                },
+                "current_status": "close"
+              },
+              "feature_id": "0x865c8a1e258e02e5:0xe146b480bdad7f9b",
+              "cid": "16232860371934609307",
+              "latitude": 29.515755199999997,
+              "longitude": -98.3017169,
+              "is_claimed": true,
+              "local_justifications": null,
+              "is_directory_item": false,
+              "price_level": null,
+              "hotel_rating": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

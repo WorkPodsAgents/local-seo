@@ -1,0 +1,33 @@
+{
+  "_source": "docs example https://docs.dataforseo.com/v3/business_data/google/my_business_updates/task_post/",
+  "version": "0.1.20200909",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.0981 sec.",
+  "cost": 0.00225,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "09221456-1535-0243-0000-26f6e01020f5",
+      "status_code": 20100,
+      "status_message": "Task Created.",
+      "time": "0.0058 sec.",
+      "cost": 0.00225,
+      "result_count": 0,
+      "path": ["v3", "business_data", "google", "my_business_updates", "task_post"],
+      "data": {
+        "api": "business_data",
+        "function": "my_business_updates",
+        "se": "google",
+        "language_code": "en",
+        "location_name": "New York,New York,United States",
+        "keyword": "RustyBrick, Inc.",
+        "se_type": "business_updates",
+        "device": "desktop",
+        "os": "windows"
+      },
+      "result": null
+    }
+  ]
+}

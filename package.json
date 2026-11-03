@@ -1,0 +1,31 @@
+{
+  "name": "local-seo",
+  "author": "Shefali Munjal",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "vendor/agent-ready/packages/core",
+    "extension",
+    "bridge"
+  ],
+  "scripts": {
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test -w packages/core -w extension -w bridge --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run format:check && npm run typecheck && npm test && node plugin/scripts/lint-skills.mjs && npm run build",
+    "sync:agent-ready": "node scripts/sync-from-agent-ready.mjs --from",
+    "release:zip": "npm run zip -w extension && mkdir -p release && cp extension/.output/local-seo-*-chrome.zip release/"
+  },
+  "devDependencies": {
+    "prettier": "3.9.8",
+    "typescript": "6.0.3",
+    "vitest": "4.1.6"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
