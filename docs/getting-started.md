@@ -5,9 +5,9 @@ You need Chrome (or another Chromium browser, such as Edge or Brave) on a deskto
 
 ## 1. Install the extension
 
-**From the Chrome Web Store:** coming at launch.
+**From the Chrome Web Store:** [Install Local SEO](https://chromewebstore.google.com/detail/local-seo-by-workpods/bljbmngieccnjdnlahdhgklcagfcphak).
 
-**From a release build (today):**
+**For developers, from a release build:**
 
 1. Download `local-seo-<version>-chrome.zip` from this repository's Releases page.
 2. Unzip it into a folder you will keep, such as `~/local-seo`. Chrome loads the extension from

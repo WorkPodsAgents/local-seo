@@ -1,0 +1,15 @@
+Local SEO
+Copyright 2026 WorkPods
+Written by Shefali Munjal.
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It includes code from Agent Ready (vendor/agent-ready/), also by WorkPods under the Apache
+License, Version 2.0.
+
+The WorkPods name and logo (vendor/agent-ready/vendor/workpods/logo/) are trademarks of WorkPods.
+The Apache License does not grant permission to use them (section 6). A fork must rename itself
+and replace the logo.
+
+Plus Jakarta Sans (vendor/agent-ready/vendor/workpods/theme/fonts/) is licensed under the SIL Open
+Font License 1.1; see vendor/agent-ready/vendor/workpods/theme/fonts/plus-jakarta-sans-OFL.txt.

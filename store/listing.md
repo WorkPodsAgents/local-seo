@@ -69,7 +69,7 @@ Local SEO is an independent tool made by WorkPods (https://workpods.ai). It is n
 sponsored by Google. Google Maps and Google Business Profile are trademarks of Google LLC, named
 here only to describe what the extension works with.
 
-Source code, docs and issues: https://github.com/workpodsai-agents/local-seo
+Source code, docs and issues: https://github.com/WorkPodsAgents/local-seo
 
 ## Category
 
