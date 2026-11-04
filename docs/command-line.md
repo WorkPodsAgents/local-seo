@@ -5,9 +5,7 @@ business's website against the name, address and phone on its Google Business Pr
 with no browser and no extension. Use it from a terminal, or in CI to fail a build when a deploy
 drops the phone number from the location page or breaks its LocalBusiness schema.
 
-You need Node 22 or later. Until `@workpods/local-seo` is published on npm, build it from a clone
-and use `node bridge/dist/cli.js` in place of `npx @workpods/local-seo`
-([how](agents-and-skills.md#before-the-npm-release)).
+You need Node 22 or later. `npx` downloads the published package when you first run it.
 
 ## Check a website
 
