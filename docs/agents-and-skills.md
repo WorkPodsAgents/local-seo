@@ -73,46 +73,6 @@ The code is kept in `~/.config/local-seo/bridge-token`, readable only by you. To
 
 <br clear="right">
 
-### Before the npm release
-
-Until `@workpods/local-seo` is on npm, run the bridge from a clone of this repository (Node 22 or
-later):
-
-```bash
-git clone https://github.com/WorkPodsAgents/local-seo.git local-seo
-cd local-seo
-npm install && npm run build -w bridge
-```
-
-Then use `node /full/path/to/local-seo/bridge/dist/cli.js` wherever these steps say
-`npx -y @workpods/local-seo`. For the tools alone in Claude Code:
-
-```bash
-claude mcp add local-seo -- node /full/path/to/local-seo/bridge/dist/cli.js mcp
-node /full/path/to/local-seo/bridge/dist/cli.js pair
-```
-
-To try the plugin with its skills from the clone, point the plugin's MCP server at your build
-first. In `plugin/.mcp.json` of your clone (don't commit this change), set:
-
-```json
-{
-  "mcpServers": {
-    "local-seo": {
-      "command": "node",
-      "args": ["/full/path/to/local-seo/bridge/dist/cli.js", "mcp"]
-    }
-  }
-}
-```
-
-Then add the clone as a local marketplace in Claude Code and install from it:
-
-```text
-/plugin marketplace add /full/path/to/local-seo
-/plugin install local-seo@local-seo
-```
-
 ## The skills
 
 Ask in plain words; the agent picks the skill. In Claude Code you can also call one by name, such
@@ -176,7 +136,5 @@ origin check and mutual pairing proofs are both required. The bridge accepts onl
 origin, never a wildcard or ordinary website origin. A bridge process serves one browser origin at
 a time.
 
-The npm package is not published as part of the extension release. To use the bridge from source,
-run `npm ci` and `npm run build -w bridge` in this repository, then configure your MCP client to run
-`node /absolute/path/to/local-seo/bridge/dist/cli.js mcp`. Run the same CLI with `pair` to get the
-pairing code. Do not pass the code or provider keys to anyone else.
+Run `npx -y @workpods/local-seo mcp` with that environment configured. Run
+`npx -y @workpods/local-seo pair` to get the pairing code. Do not share the code or provider keys.
