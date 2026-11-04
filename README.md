@@ -15,7 +15,9 @@ extension. It needs no account and has no telemetry.
 
 ## Install
 
-Until it is on the Chrome Web Store, install a release build:
+Install [Local SEO from the Chrome Web Store](https://chromewebstore.google.com/detail/local-seo-by-workpods/bljbmngieccnjdnlahdhgklcagfcphak).
+
+For development or release testing, you can install an unpacked build:
 
 1. Download `local-seo-<version>-chrome.zip` from Releases and unzip it into a folder you will
    keep.

@@ -9,12 +9,14 @@
     "local-seo": "dist/cli.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "NOTICE"
   ],
   "scripts": {
     "build": "esbuild src/cli.ts --bundle --platform=node --format=esm --target=node22 --outfile=dist/cli.js --banner:js=\"#!/usr/bin/env node\" --external:@modelcontextprotocol/sdk --external:linkedom --external:ws --external:zod",
     "typecheck": "tsc -p .",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepack": "npm run build"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.32.2",
@@ -31,5 +33,17 @@
   },
   "engines": {
     "node": ">=22"
+  },
+  "homepage": "https://github.com/WorkPodsAgents/local-seo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WorkPodsAgents/local-seo.git",
+    "directory": "bridge"
+  },
+  "bugs": {
+    "url": "https://github.com/WorkPodsAgents/local-seo/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -19,7 +19,7 @@ results only, and every paid call counts against the caps you set in the panel.
 **Claude Code**, with the skills (recommended), from this repository:
 
 ```text
-/plugin marketplace add workpodsai-agents/local-seo
+/plugin marketplace add WorkPodsAgents/local-seo
 /plugin install local-seo@local-seo
 ```
 
@@ -79,7 +79,7 @@ Until `@workpods/local-seo` is on npm, run the bridge from a clone of this repos
 later):
 
 ```bash
-git clone <repository URL> local-seo
+git clone https://github.com/WorkPodsAgents/local-seo.git local-seo
 cd local-seo
 npm install && npm run build -w bridge
 ```
