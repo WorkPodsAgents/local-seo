@@ -1,7 +1,10 @@
 {
   "name": "@workpods/local-seo",
-  "author": "Shefali Munjal",
-  "version": "1.0.0",
+  "author": {
+    "name": "WorkPods",
+    "url": "https://workpods.ai"
+  },
+  "version": "1.0.1",
   "description": "Local MCP server and CLI for the Local SEO extension: Google Business Profile and Maps audits.",
   "license": "Apache-2.0",
   "type": "module",
@@ -34,7 +37,7 @@
   "engines": {
     "node": ">=22"
   },
-  "homepage": "https://github.com/WorkPodsAgents/local-seo",
+  "homepage": "https://workpods.ai/tools/local-seo",
   "repository": {
     "type": "git",
     "url": "https://github.com/WorkPodsAgents/local-seo.git",
@@ -45,5 +48,22 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "local-seo",
+    "google-business-profile",
+    "google-maps",
+    "reviews",
+    "seo",
+    "chrome-extension",
+    "cli"
+  ],
+  "contributors": [
+    {
+      "name": "Shefali Munjal"
+    }
+  ],
+  "mcpName": "ai.workpods/local-seo"
 }
