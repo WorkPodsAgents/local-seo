@@ -78,7 +78,7 @@ for Codex, skills, and Firefox origin configuration.
 - **Categories and history:** suggest categories and compare saved profile snapshots to show
   what changed. The tools read profiles; they do not publish changes to Google.
 
-No WorkPods account is required. Optional providers use your own accounts and may charge for
+No WorkPods.ai account is required. Optional providers use your own accounts and may charge for
 usage. Keys stay in the extension; the MCP server returns results and does not receive those keys.
 
 ## Links
@@ -89,5 +89,5 @@ usage. Keys stay in the extension; the MCP server returns results and does not r
 [CLI documentation](https://github.com/WorkPodsAgents/local-seo/blob/main/docs/command-line.md) ·
 [Apache-2.0 license](https://github.com/WorkPodsAgents/local-seo/blob/main/LICENSE)
 
-Built by [WorkPods](https://workpods.ai). Written by Shefali Munjal. See LICENSE and NOTICE for
+Built by [WorkPods.ai](https://workpods.ai/tools/local-seo). Written by Shefali Munjal. See LICENSE and NOTICE for
 licensing and attribution. Not affiliated with or endorsed by Google.

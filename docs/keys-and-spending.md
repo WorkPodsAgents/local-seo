@@ -3,7 +3,7 @@
 Everything on the free side of Local SEO works with no keys: audits, Local scan, Teleport, geo-grids
 up to 5 x 5, up to 100 reviews from Maps, the website check and AI answers in Assist mode. Add a
 key when you want more than the browser can read. You pay the provider directly, from your own
-account; Local SEO and WorkPods take nothing and see nothing.
+account; Local SEO and WorkPods.ai take nothing and see nothing.
 
 | Provider                        | What it unlocks                                                                          | Where to get a key                                               |
 | ------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |

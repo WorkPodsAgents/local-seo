@@ -9,7 +9,7 @@ Local SEO gives your coding agent the same audits as the side panel. Two pieces 
   competitor gap, a rank diagnosis or a review plan with those tools, and write the results to
   files in your project.
 
-Nothing goes through a WorkPods server. Your API keys stay in the extension; the agent gets
+Nothing goes through a WorkPods.ai server. Your API keys stay in the extension; the agent gets
 results only, and every paid call counts against the caps you set in the panel.
 
 ## Set up

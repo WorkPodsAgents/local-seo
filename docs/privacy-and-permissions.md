@@ -1,7 +1,7 @@
 # Privacy and permissions
 
 Local SEO has no account, no server of ours and no telemetry. It doesn't send your data, your
-results or your usage to WorkPods or anyone else. This page says what it stores, what it sends
+results or your usage to WorkPods.ai or anyone else. This page says what it stores, what it sends
 where, and why it asks for each permission. The code is open, so you can check every line. The
 formal policy is [PRIVACY.md](../PRIVACY.md).
 
