@@ -1,6 +1,6 @@
 {
   "name": "local-seo",
-  "owner": { "name": "WorkPods", "url": "https://workpods.ai" },
+  "owner": { "name": "WorkPods.ai", "url": "https://workpods.ai" },
   "plugins": [
     {
       "name": "local-seo",
