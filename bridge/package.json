@@ -1,11 +1,8 @@
 {
   "name": "@workpods/local-seo",
-  "author": {
-    "name": "WorkPods.ai",
-    "url": "https://workpods.ai"
-  },
-  "version": "1.0.1",
-  "description": "Local SEO MCP server and CLI for the Local SEO extension: Google Business Profile audits, Google Maps rankings and geo grids, and NAP website checks for Claude Code, Codex and CI.",
+  "author": "WorkPods.ai <yours@workpods.ai> (https://workpods.ai)",
+  "version": "1.0.2",
+  "description": "Free, open-source checker for a local business's location pages and Google Business Profile. MCP server and CLI. Made by WorkPods.ai, an AI SEO agency.",
   "license": "Apache-2.0",
   "type": "module",
   "bin": {

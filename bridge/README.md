@@ -83,7 +83,7 @@ usage. Keys stay in the extension; the MCP server returns results and does not r
 
 ## Links
 
-[Local SEO by WorkPods](https://workpods.ai/tools/local-seo) ·
+[Local SEO by WorkPods.ai](https://workpods.ai/tools/local-seo) ·
 [Source code](https://github.com/WorkPodsAgents/local-seo) ·
 [Privacy policy](https://github.com/WorkPodsAgents/local-seo/blob/main/PRIVACY.md) ·
 [CLI documentation](https://github.com/WorkPodsAgents/local-seo/blob/main/docs/command-line.md) ·
